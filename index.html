@@ -124,7 +124,7 @@
 		
 			<h1>j<span class="h1-thin">ames</span>d<span class="h1-thin">avies</span></h1>
 			<p class="hi">hi.</p>
-			<p class="tagline tlt">i'm a musician, web developer and<br>writer from south wales.</p>
+			<p class="tagline">i'm a musician, web developer and<br>writer from south wales.</p>
 
 			<div class="navbar navbar-fixed-bottom">
 				<ul>
@@ -140,11 +140,9 @@
 	</div>
 
 
-	<!--External files - BootstrapJS, jQuery, lettering.js, textillate -->
+	<!--External files - BootstrapJS, jQuery -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/lettering/0.7.0/jquery.lettering.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.js"></script>
 	
 	<script>
 
@@ -160,7 +158,8 @@
 
 	//animate tagline//
 	$(document).ready(function(){
-		$(".tlt").textillate({ in: { effect: 'fadeInUp', shuffle:true } });
+		$(".tagline").delay(3000).fadeIn('slow');
+		$(".tagline").addClass("animated fadeInUp");
 	});
 
 	//Show navbar//
