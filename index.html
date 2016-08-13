@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!--animate.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+
+	<!--Fonts-->
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,100,700,800,500' rel='stylesheet' type='text/css'>
+
+	<title>James Davies - Musician, Web Developer, Writer</title>
+
+	<style>
+
+		/*landing page*/
+
+		.bg-top {
+			width: 100%;
+			height: 100vh;
+			text-align: center;
+			margin: 0;
+			overflow: hidden;
+			background-color: rgba(98,178,246,1);
+			background: -webkit-linear-gradient(left top, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Safari 5.1 to 6.0 */
+  			background: -o-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Opera 11.1 to 12.0 */
+  			background: -moz-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Firefox 3.6 to 15 */
+  			background: linear-gradient(to bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* Standard syntax */
+		}
+
+		
+		h1 {
+			color: rgba(255,255,255,1);
+			font-family: 'Raleway', sans-serif;
+			font-size: 8em;
+			font-weight: 600;
+			position: relative;
+			top: 140px;
+			cursor: default;
+		}
+
+		.h1-thin {
+			font-weight: 100;
+		}
+
+		.bg-top p {
+			font-family: 'Raleway', sans-serif;
+			font-size: 2em;
+			position: relative;
+			top: 170px;
+			color: rgba(255,255,255,1);
+			cursor: default;
+		}
+
+		.hi {
+			font-weight: 600;
+			font-size: 3em;
+		}
+
+		.tagline {
+			font-weight: 100;
+		}
+
+		.navbar {
+			height: 60px;
+			line-height: 55px;
+			width: 100%;
+			background-color: rgba(255,255,255,1);
+			
+		}
+
+		ul {
+			color: rgba(12,111,196,1);
+			text-align: right;
+		}
+
+		li {
+			display: inline;
+			padding: 10px 40px 10px 40px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+			font-size: 1.5em;
+			vertical-align: middle;
+			line-height: normal;
+		}
+
+		.nav-link {
+			color: rgba(12,111,196,1);
+			position: relative;
+		}
+
+		.nav-link:hover {
+			text-decoration: none;
+			color: rgba(12,111,196,1);
+		}
+
+		.nav-link:after {
+  			content: '';
+  			position: absolute;
+  			bottom: -4px;
+  			left: 0;
+  			width: 0%;
+  			border-bottom: 2px solid rgba(98,150,246,1);
+  			transition: 0.4s;
+		}
+
+		.nav-link:hover:after {
+			width: 100%;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="bg-top">
+		
+			<h1>j<span class="h1-thin">ames</span>d<span class="h1-thin">avies</span></h1>
+			<p class="hi">hi.</p>
+			<p class="tagline animated infinite bounce">i'm a musician, web developer and<br>writer from south wales.</p>
+
+			<div class="navbar navbar-fixed-bottom">
+				<ul>
+					<li><a class="nav-link" href="#">music</a></li>
+					<li><a class="nav-link" href="#">design portfolio</a></li>
+					<li><a class="nav-link" href="#">writing</a></li>
+					<li><a class="nav-link" href="#">about</a></li>
+					<li><a class="nav-link" href="#">contact</a></li>
+					<li><a class="nav-link" href="#">blog</a></li>
+				</ul>
+			</div>
+		
+	</div>
+
+
+	<!--External files - jQuery, BootstrapJS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	
+</body>
+</html>
