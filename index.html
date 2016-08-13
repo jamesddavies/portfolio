@@ -13,12 +13,20 @@
 	<!--Fonts-->
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,100,700,800,500' rel='stylesheet' type='text/css'>
 
+	<!--Font Awesome-->
+	<script src="https://use.fontawesome.com/5da19112ad.js"></script>
+
 	<!--ICO image-->
 	<link rel="icon" type="image/png" href="http://res.cloudinary.com/jamesddavies/image/upload/v1471098832/jd-ico_jy45xh.png"/>
 
 	<title>James Davies - Musician, Web Developer, Writer</title>
 
 	<style>
+
+		body {
+			overflow-x: hidden;
+			overflow-y: hidden;
+		}
 
 		/*landing page*/
 
@@ -69,6 +77,8 @@
 			font-weight: 100;
 		}
 
+		/*desktop nav*/
+
 		.navbar {
 			height: 60px;
 			line-height: 55px;
@@ -116,6 +126,50 @@
 			width: 100%;
 		}
 
+		/*mobile nav*/
+
+		.mobile-menu-icon {
+			display: none;
+		}
+
+		.fa-bars {
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+			top: 50px;
+			color: rgba(255,255,255,1);
+			z-index: 0;
+		}
+
+		.mobile-ul {
+			width: 100%;
+			color: rgba(12,111,196,1);
+			background-color: rgba(255,255,255,1);
+			position: absolute;
+			z-index: 1;
+			display: none;
+		}
+
+		.mobile-link {
+			display: block;
+			padding: 10px 20px 10px 10px;
+			margin: 0 auto;
+		}
+
+		.mobile-link:hover {
+			text-decoration: none;
+			color: rgba(12,111,196,1);
+		}
+
+		.mobile-link:focus, .mobile-link:active {
+			text-decoration: none;
+			color: rgba(12,111,196,1);
+		}
+
+
+
 
 		/*Responsive design*/
 
@@ -145,6 +199,24 @@
 <body>
 
 	<div class="bg-top">
+
+			<!--Mobile Nav-->
+			<div class="mobile-menu-icon">
+				<i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+			</div>
+
+			<div class="mobile-nav">
+				<ul class="mobile-ul">
+					<li><a class="mobile-link" href="#">music</a></li>
+					<li><a class="mobile-link" href="#">design portfolio</a></li>
+					<li><a class="mobile-link" href="#">writing</a></li>
+					<li><a class="mobile-link" href="#">about</a></li>
+					<li><a class="mobile-link" href="#">contact</a></li>
+					<li><a class="mobile-link" href="#">blog</a></li>
+				</ul>
+			</div>
+
+
 			<!--name, intro paragraph-->
 			<h1>j<span class="h1-thin">ames</span>d<span class="h1-thin">avies</span></h1>
 			<p class="hi">hi.</p>
@@ -165,9 +237,10 @@
 	</div>
 
 
-	<!--External files - BootstrapJS, jQuery -->
+	<!--External files - BootstrapJS, jQuery, jQuery UI -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 	
 	<script>
 
@@ -187,13 +260,36 @@
 		$(".intro").addClass("animated fadeInUp");
 	});
 
-	//Show navbar//
+	//Show desktop navbar//
 	$(document).ready(function(){
 		if ($(window).width() > 1000) {
-		$(".navbar").delay(4000).fadeIn('slow');
+			$(".navbar").delay(4000).fadeIn('slow');
 	} else {
-		$(".navbar").hide();
+			$(".navbar").hide();
 	};
+	});
+
+	//Show mobile menu icon//
+	$(document).ready(function(){
+		if ($(window).width() <= 1000) {
+			$(".mobile-menu-icon").delay(4000).fadeIn('slow');
+		} else {
+			$(".mobile-menu-icon").hide();
+		};
+	});
+
+	//Slide mobile menu when icon is clicked//
+	$(document).ready(function(){
+		$(".mobile-menu-icon").click(function(){
+			$(".mobile-ul").show('slide',{direction:'right'},1000);
+		});
+	});
+
+	//Hide mobile menu when menu item is clicked//
+	$(document).ready(function(){
+		$(".mobile-link").click(function(){
+			$(".mobile-ul").hide('slide',{direction:'right'},1000);
+		});
 	});
 
 	</script>
