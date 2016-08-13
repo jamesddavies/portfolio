@@ -13,6 +13,9 @@
 	<!--Fonts-->
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,100,700,800,500' rel='stylesheet' type='text/css'>
 
+	<!--ICO image-->
+	<link rel="icon" type="image/png" href="http://res.cloudinary.com/jamesddavies/image/upload/v1471098832/jd-ico_jy45xh.png"/>
+
 	<title>James Davies - Musician, Web Developer, Writer</title>
 
 	<style>
@@ -142,11 +145,12 @@
 <body>
 
 	<div class="bg-top">
-		
+			<!--name, intro paragraph-->
 			<h1>j<span class="h1-thin">ames</span>d<span class="h1-thin">avies</span></h1>
 			<p class="hi">hi.</p>
 			<p class="intro">i'm a musician, web developer and<br>writer from south wales.</p>
 
+			<!--desktop navbar-->
 			<div class="navbar navbar-fixed-bottom">
 				<ul>
 					<li><a class="nav-link" href="#">music</a></li>
@@ -185,7 +189,11 @@
 
 	//Show navbar//
 	$(document).ready(function(){
+		if ($(window).width() > 1000) {
 		$(".navbar").delay(4000).fadeIn('slow');
+	} else {
+		$(".navbar").hide();
+	};
 	});
 
 	</script>
