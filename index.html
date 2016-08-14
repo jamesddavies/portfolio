@@ -36,11 +36,12 @@
 			text-align: center;
 			margin: 0;
 			overflow: hidden;
-			background-color: rgba(98,178,246,1);
+			/*background-color: rgba(98,178,246,1);
 			background: -webkit-linear-gradient(left top, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Safari 5.1 to 6.0 */
-  			background: -o-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Opera 11.1 to 12.0 */
-  			background: -moz-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Firefox 3.6 to 15 */
-  			background: linear-gradient(to bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* Standard syntax */
+  			/*background: -o-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Opera 11.1 to 12.0 */
+  			/*background: -moz-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Firefox 3.6 to 15 */
+  			/*background: linear-gradient(to bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* Standard syntax */
+  			
 		}
 
 		
@@ -88,7 +89,6 @@
 		}
 
 		ul {
-			color: rgba(12,111,196,1);
 			text-align: right;
 		}
 
@@ -103,13 +103,13 @@
 		}
 
 		.nav-link {
-			color: rgba(12,111,196,1);
+			/*color: rgba(12,111,196,1);*/
 			position: relative;
 		}
 
 		.nav-link:hover {
 			text-decoration: none;
-			color: rgba(12,111,196,1);
+			/*color: rgba(12,111,196,1);*/
 		}
 
 		.nav-link:after {
@@ -118,7 +118,7 @@
   			bottom: -4px;
   			left: 0;
   			width: 0%;
-  			border-bottom: 2px solid rgba(8,110,190,1);
+  			border-bottom: 1px solid;
   			transition: 0.4s;
 		}
 
@@ -144,10 +144,11 @@
 		}
 
 		.mobile-ul {
-			width: 100%;
+			width: 80%;
 			color: rgba(12,111,196,1);
 			background-color: rgba(255,255,255,1);
 			position: absolute;
+			right: 0;
 			z-index: 1;
 			display: none;
 		}
@@ -156,6 +157,7 @@
 			display: block;
 			padding: 10px 20px 10px 10px;
 			margin: 0 auto;
+			cursor: pointer;
 		}
 
 		.mobile-link:hover {
@@ -213,6 +215,7 @@
 					<li><a class="mobile-link" href="#">about</a></li>
 					<li><a class="mobile-link" href="#">contact</a></li>
 					<li><a class="mobile-link" href="#">blog</a></li>
+					<li class="mobile-link">close menu</li>
 				</ul>
 			</div>
 
@@ -243,6 +246,45 @@
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 	
 	<script>
+
+	//randomise background + menu item colour//
+	$(window).load(function(){
+		var bgnum = Math.random();
+		if (bgnum < 0.33) {
+			$(".bg-top").css({
+				"background-color": "rgba(98,178,246,1)",
+				"background": "-webkit-linear-gradient(left top, rgba(98,178,246,1), rgba(3,89,162,1))", // For Safari 5.1 to 6.0 // //blue background//
+  				"background": "-o-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1))", // For Opera 11.1 to 12.0 //
+  				"background": "-moz-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1))", // For Firefox 3.6 to 15 //
+  				"background": "linear-gradient(to bottom right, rgba(98,178,246,1), rgba(3,89,162,1))" // Standard syntax //
+				});
+			$(".nav-link, .nav-link:hover").css("color", "rgba(12,111,196,1)"); //blue nav items desktop//
+			$(".nav-link:after").css("border-color", "rgba(8,110,190,1)");
+			$(".mobile-ul, .mobile-link:hover, .mobile-link:focus, .mobile-link:active").css("color", "rgba(12,111,196,1)"); //blue nav items mobile//
+		} else if (bgnum < 0.66) {
+			$(".bg-top").css({
+				"background-color": "rgba(235,30,30,1)",
+				"background": "-webkit-linear-gradient(left top, rgba(235,30,30,1), rgba(154,20,20,1))", // For Safari 5.1 to 6.0 // //red background//
+  				"background": "-o-linear-gradient(bottom right, rgba(235,30,30,1), rgba(154,20,20,1))", // For Opera 11.1 to 12.0 //
+  				"background": "-moz-linear-gradient(bottom right, rgba(235,30,30,1), rgba(154,20,20,1))", // For Firefox 3.6 to 15 //
+  				"background": "linear-gradient(to bottom right, rgba(235,30,30,1), rgba(154,20,20,1))" // Standard syntax //
+				})
+			$(".nav-link, .nav-link:hover").css("color", "rgba(216,27,27,1)"); //red nav items desktop//
+			$(".nav-link:after").css("border-color", "rgba(185,24,24,1)");
+			$(".mobile-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active").css("color", "rgba(216,27,27,1)"); //red nav items mobile//
+		} else {
+			$(".bg-top").css({
+				"background-color": "rgba(20,181,8,1)",
+				"background": "-webkit-linear-gradient(left top, rgba(64,211,53,1), rgba(16,89,11,1))", // For Safari 5.1 to 6.0 // //green background//
+  				"background": "-o-linear-gradient(bottom right, rgba(64,211,53,1), rgba(16,89,11,1))", // For Opera 11.1 to 12.0 //
+  				"background": "-moz-linear-gradient(bottom right, rgba(64,211,53,1), rgba(16,89,11,1))", // For Firefox 3.6 to 15 //
+  				"background": "linear-gradient(to bottom right, rgba(64,211,53,1), rgba(16,89,11,1))" // Standard syntax //
+				})
+			$(".nav-link, .nav-link:hover").css("color", "rgba(57,183,47,1)"); //green nav items desktop//
+			$(".nav-link:after").css("border-color", "rgba(48,156,40,1)");
+			$(".mobile-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active").css("color", "rgba(57,183,47,1)"); //green nav items mobile//
+		};
+	});
 
 	//move name heading//
 	$(document).ready(function(){
@@ -281,7 +323,7 @@
 	//Slide mobile menu when icon is clicked//
 	$(document).ready(function(){
 		$(".mobile-menu-icon").click(function(){
-			$(".mobile-ul").show('slide',{direction:'right'},800);
+			$(".mobile-ul").show('slide',{direction:'right'},400);
 		});
 	});
 
