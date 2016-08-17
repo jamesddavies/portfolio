@@ -36,6 +36,7 @@
 			text-align: center;
 			margin: 0;
 			overflow: hidden;
+			
 			/*background-color: rgba(98,178,246,1);
 			background: -webkit-linear-gradient(left top, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Safari 5.1 to 6.0 */
   			/*background: -o-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Opera 11.1 to 12.0 */
@@ -86,6 +87,8 @@
 			width: 100%;
 			background-color: rgba(255,255,255,1);
 			display: none;
+			position: absolute;
+			z-index: 100;
 		}
 
 		ul {
@@ -111,7 +114,7 @@
 			text-decoration: none;
 			/*color: rgba(12,111,196,1);*/
 		}
-		
+
 		.nav-link:focus, .nav-link:active {
 			text-decoration: none;
 		}
@@ -175,7 +178,14 @@
 		}
 
 
+		/*MUSIC SECTION*/
 
+		.music-bg {
+			height: 1000px;
+			width: 100%;
+			background-color: rgba(80,80,80,1);
+			z-index: 0;
+		}
 
 		/*Responsive design*/
 
@@ -229,6 +239,9 @@
 			<p class="hi">hi.</p>
 			<p class="intro">i'm a musician, web developer and<br>writer from south wales.</p>
 
+
+	</div>
+	
 			<!--desktop navbar-->
 			<div class="navbar navbar-fixed-bottom">
 				<ul>
@@ -241,7 +254,10 @@
 				</ul>
 			</div>
 		
-	</div>
+	
+
+
+	<div class="music-bg" id="music"></div>
 
 
 	<!--External files - BootstrapJS, jQuery, jQuery UI -->
@@ -335,6 +351,14 @@
 	$(document).ready(function(){
 		$(".mobile-link").click(function(){
 			$(".mobile-ul").hide('slide',{direction:'right'},400);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".nav-link").click(function(){
+			$(".navbar").animate({top: "0px"}).removeClass("navbar-fixed-bottom");
+			$(".bg-top").slideUp();
+			$(".music-bg").delay(200).fadeIn('fast');
 		});
 	});
 
