@@ -509,10 +509,10 @@
 	$(document).ready(function(){
 		$(".jd-link").click(function(){
 			var navHeight = $(".navbar").height();
+			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg").delay(200).fadeOut('fast');
 			$(".navbar").animate({top: $(window).height() - navHeight});
 			$(".bg-top").slideDown();
-			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg").delay(200).fadeOut('fast');
-			$(".jd-link").delay(200).fadeOut('fast');
+			$(".jd-link").delay(300).fadeOut('slow');
 		})
 	})
 
