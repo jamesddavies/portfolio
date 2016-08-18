@@ -291,13 +291,13 @@
 
 			<div class="mobile-nav">
 				<ul class="mobile-ul">
-					<li><a class="mobile-link" href="#music">music</a></li>
-					<li><a class="mobile-link" href="#design">design portfolio</a></li>
-					<li><a class="mobile-link" href="#writing">writing</a></li>
-					<li><a class="mobile-link" href="#about">about</a></li>
-					<li><a class="mobile-link" href="#contact">contact</a></li>
-					<li><a class="mobile-link" href="#blog">blog</a></li>
-					<li class="mobile-link">close menu</li>
+					<li><a class="mobile-link musicmlink" href="#music">music</a></li>
+					<li><a class="mobile-link designmlink" href="#design">design portfolio</a></li>
+					<li><a class="mobile-link writingmlink" href="#writing">writing</a></li>
+					<li><a class="mobile-link aboutmlink" href="#about">about</a></li>
+					<li><a class="mobile-link contactmlink" href="#contact">contact</a></li>
+					<li><a class="mobile-link blogmlink" href="#blog">blog</a></li>
+					<li class="close-link">close menu</li>
 				</ul>
 			</div>
 
@@ -328,21 +328,32 @@
 
 	
 		<div class="music-bg" id="music">
+			<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
 			<p class="test-p">music</p>
 		</div>
+
 		<div class="design-bg" id="design">
+			<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
 			<p class="test-p">design</p>
 		</div>
+
 		<div class="writing-bg" id="writing">
+			<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
 			<p class="test-p">writing</p>
 		</div>
+
 		<div class="about-bg" id="about">
+			<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
 			<p class="test-p">about</p>
 		</div>
+
 		<div class="contact-bg" id="contact">
+			<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
 			<p class="test-p">contact</p>
 		</div>
+
 		<div class="blog-bg" id="blog">
+			<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
 			<p class="test-p">blog</p>
 		</div>
 	
@@ -428,20 +439,6 @@
 		};
 	});
 
-	//Slide mobile menu when icon is clicked//
-	$(document).ready(function(){
-		$(".mobile-menu-icon").click(function(){
-			$(".mobile-ul").show('slide',{direction:'right'},400);
-		});
-	});
-
-	//Hide mobile menu when menu item is clicked//
-	$(document).ready(function(){
-		$(".mobile-link").click(function(){
-			$(".mobile-ul").hide('slide',{direction:'right'},400);
-		});
-	});
-
 	//Hide bg-top and show content on nav-item click//
 
 	$(document).ready(function(){
@@ -508,12 +505,71 @@
 		})
 	})
 
+	//MOBILE//
+
+	//Slide mobile menu when icon is clicked//
+	$(document).ready(function(){
+		$(".mobile-menu-icon").click(function(){
+			$(".mobile-ul").show('slide',{direction:'right'},400);
+		});
+	});
+
+	//Hide mobile menu when menu item is clicked//
+	$(document).ready(function(){
+		$(".mobile-link, .close-link").click(function(){
+			$(".mobile-ul").hide('slide',{direction:'right'},400);
+		});
+	});
+
 	//Hide bg-top and show content MOBILE//
 
 	$(document).ready(function(){
 		$(".mobile-link").click(function(){
 			$(".bg-top").slideUp();
-			$(".content-bg").delay(200).fadeIn('fast');
+		});
+	});
+
+	//Show content when corresponding link is clicked MOBILE//
+
+	$(document).ready(function(){
+		$(".musicmlink").click(function(){
+			$(".design-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
+			$(".music-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".designmlink").click(function(){
+			$(".music-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
+			$(".design-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".writingmlink").click(function(){
+			$(".music-bg, .design-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
+			$(".writing-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".aboutmlink").click(function(){
+			$(".music-bg, .design-bg, .writing-bg, .contact-bg, .blog-bg").fadeOut('fast');
+			$(".about-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".contactmlink").click(function(){
+			$(".music-bg, .design-bg, .writing-bg, .about-bg, .blog-bg").fadeOut('fast');
+			$(".contact-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".blogmlink").click(function(){
+			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg").fadeOut('fast');
+			$(".blog-bg").show('slide',{direction:'up'},200);
 		});
 	});
 
