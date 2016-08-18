@@ -25,6 +25,9 @@
 
 		body {
 			overflow-x: hidden;
+		}
+
+		.body-overflow {
 			overflow-y: hidden;
 		}
 
@@ -35,14 +38,7 @@
 			height: 100vh;
 			text-align: center;
 			margin: 0;
-			overflow: hidden;
-			
-			/*background-color: rgba(98,178,246,1);
-			background: -webkit-linear-gradient(left top, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Safari 5.1 to 6.0 */
-  			/*background: -o-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Opera 11.1 to 12.0 */
-  			/*background: -moz-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* For Firefox 3.6 to 15 */
-  			/*background: linear-gradient(to bottom right, rgba(98,178,246,1), rgba(3,89,162,1)); /* Standard syntax */
-  			
+			overflow: hidden; 			
 		}
 
 		
@@ -56,8 +52,12 @@
 			cursor: default;
 		}
 
-		.h1-thin {
+		.jd-thin {
 			font-weight: 100;
+		}
+
+		.jd2-thin {
+			font-weight: 400;
 		}
 
 		.bg-top p {
@@ -89,6 +89,7 @@
 			display: none;
 			position: absolute;
 			z-index: 100;
+			overflow: hidden;
 		}
 
 		ul {
@@ -103,6 +104,15 @@
 			font-size: 1.5em;
 			vertical-align: middle;
 			line-height: normal;
+		}
+
+		.jd-link {
+			position: relative;
+			left: -80px;
+			font-weight: 600;
+			font-size: 2em;
+			display: none;
+			cursor: pointer;
 		}
 
 		.nav-link {
@@ -178,23 +188,81 @@
 		}
 
 
-		/*MUSIC SECTION*/
+		/*CONTENT BACKGROUND DIV*/
 
-		.music-bg {
-			height: 1000px;
+		.content-bg-bg {
+			height: 3000px;
 			width: 100%;
 			background-color: rgba(80,80,80,1);
 			z-index: 0;
+			position: relative;
+			display: none;
+		}
+
+		/*SECTION BACKGROUNDS*/
+		
+		.music-bg {
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(255,255,255,1);
+			display: none;
+			position: absolute;
+			margin-top: 60px;
+		}
+
+		.design-bg {
+			width: 100%;
+			height: 100vh;
+			display: none;
+			position: absolute;
+			margin-top: 60px;
+		}
+
+		.writing-bg {
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(255,255,255,1);
+			display: none;
+			position: absolute;
+			margin-top: 60px;
+		}
+
+		.about-bg {
+			width: 100%;
+			height: 100vh;
+			display: none;
+			position: absolute;
+			margin-top: 60px;
+		}
+
+		.contact-bg {
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(255,255,255,1);
+			display: none;
+			position: absolute;
+			margin-top: 60px;
+		}
+
+		.blog-bg {
+			width: 100%;
+			height: 100vh;
+			display: none;
+			position: absolute;
+			margin-top: 60px;
+		}
+
+		.test-p {
+			font-size: 48px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
 		}
 
 		/*Responsive design*/
 
 		@media (max-width: 1000px) {
 
-			.navbar {
-				width: 200%;
-				overflow-x: scroll;
-			}
+			
 
 		}
 
@@ -223,41 +291,61 @@
 
 			<div class="mobile-nav">
 				<ul class="mobile-ul">
-					<li><a class="mobile-link" href="#">music</a></li>
-					<li><a class="mobile-link" href="#">design portfolio</a></li>
-					<li><a class="mobile-link" href="#">writing</a></li>
-					<li><a class="mobile-link" href="#">about</a></li>
-					<li><a class="mobile-link" href="#">contact</a></li>
-					<li><a class="mobile-link" href="#">blog</a></li>
+					<li><a class="mobile-link" href="#music">music</a></li>
+					<li><a class="mobile-link" href="#design">design portfolio</a></li>
+					<li><a class="mobile-link" href="#writing">writing</a></li>
+					<li><a class="mobile-link" href="#about">about</a></li>
+					<li><a class="mobile-link" href="#contact">contact</a></li>
+					<li><a class="mobile-link" href="#blog">blog</a></li>
 					<li class="mobile-link">close menu</li>
 				</ul>
 			</div>
 
 
 			<!--name, intro paragraph-->
-			<h1>j<span class="h1-thin">ames</span>d<span class="h1-thin">avies</span></h1>
+			<h1>j<span class="jd-thin">ames</span>d<span class="jd-thin">avies</span></h1>
 			<p class="hi">hi.</p>
 			<p class="intro">i'm a musician, web developer and<br>writer from south wales.</p>
 
 
 	</div>
-	
+
 			<!--desktop navbar-->
 			<div class="navbar navbar-fixed-bottom">
 				<ul>
-					<li><a class="nav-link" href="#">music</a></li>
-					<li><a class="nav-link" href="#">design portfolio</a></li>
-					<li><a class="nav-link" href="#">writing</a></li>
-					<li><a class="nav-link" href="#">about</a></li>
-					<li><a class="nav-link" href="#">contact</a></li>
-					<li><a class="nav-link" href="#">blog</a></li>
+					<li class="jd-link">j<span class="jd2-thin">ames</span>d<span class="jd2-thin">avies</span></li>
+					<li><a class="nav-link music-link" href="#music">music</a></li>
+					<li><a class="nav-link design-link" href="#design">design portfolio</a></li>
+					<li><a class="nav-link writing-link" href="#writing">writing</a></li>
+					<li><a class="nav-link about-link" href="#about">about</a></li>
+					<li><a class="nav-link contact-link" href="#contact">contact</a></li>
+					<li><a class="nav-link blog-link" href="#blog">blog</a></li>
 				</ul>
 			</div>
 		
 	
 
 
-	<div class="music-bg" id="music"></div>
+	
+		<div class="music-bg" id="music">
+			<p class="test-p">music</p>
+		</div>
+		<div class="design-bg" id="design">
+			<p class="test-p">design</p>
+		</div>
+		<div class="writing-bg" id="writing">
+			<p class="test-p">writing</p>
+		</div>
+		<div class="about-bg" id="about">
+			<p class="test-p">about</p>
+		</div>
+		<div class="contact-bg" id="contact">
+			<p class="test-p">contact</p>
+		</div>
+		<div class="blog-bg" id="blog">
+			<p class="test-p">blog</p>
+		</div>
+	
 
 
 	<!--External files - BootstrapJS, jQuery, jQuery UI -->
@@ -271,36 +359,36 @@
 	$(window).load(function(){
 		var bgnum = Math.random();
 		if (bgnum < 0.33) {
-			$(".bg-top").css({
+			$(".bg-top, .design-bg, .about-bg, .blog-bg").css({
 				"background-color": "rgba(98,178,246,1)",
 				"background": "-webkit-linear-gradient(left top, rgba(98,178,246,1), rgba(3,89,162,1))", // For Safari 5.1 to 6.0 // //blue background//
   				"background": "-o-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1))", // For Opera 11.1 to 12.0 //
   				"background": "-moz-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(98,178,246,1), rgba(3,89,162,1))" // Standard syntax //
 				});
-			$(".nav-link, .nav-link:hover").css("color", "rgba(12,111,196,1)"); //blue nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover").css("color", "rgba(12,111,196,1)"); //blue nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(8,110,190,1)");
 			$(".mobile-ul, .mobile-link:hover, .mobile-link:focus, .mobile-link:active").css("color", "rgba(12,111,196,1)"); //blue nav items mobile//
 		} else if (bgnum < 0.66) {
-			$(".bg-top").css({
+			$(".bg-top, .design-bg, .about-bg, .blog-bg").css({
 				"background-color": "rgba(235,30,30,1)",
 				"background": "-webkit-linear-gradient(left top, rgba(235,30,30,1), rgba(154,20,20,1))", // For Safari 5.1 to 6.0 // //red background//
   				"background": "-o-linear-gradient(bottom right, rgba(235,30,30,1), rgba(154,20,20,1))", // For Opera 11.1 to 12.0 //
   				"background": "-moz-linear-gradient(bottom right, rgba(235,30,30,1), rgba(154,20,20,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(235,30,30,1), rgba(154,20,20,1))" // Standard syntax //
 				})
-			$(".nav-link, .nav-link:hover").css("color", "rgba(216,27,27,1)"); //red nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover").css("color", "rgba(216,27,27,1)"); //red nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(185,24,24,1)");
 			$(".mobile-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active").css("color", "rgba(216,27,27,1)"); //red nav items mobile//
 		} else {
-			$(".bg-top").css({
+			$(".bg-top, .design-bg, .about-bg, .blog-bg").css({
 				"background-color": "rgba(20,181,8,1)",
 				"background": "-webkit-linear-gradient(left top, rgba(64,211,53,1), rgba(16,89,11,1))", // For Safari 5.1 to 6.0 // //green background//
   				"background": "-o-linear-gradient(bottom right, rgba(64,211,53,1), rgba(16,89,11,1))", // For Opera 11.1 to 12.0 //
   				"background": "-moz-linear-gradient(bottom right, rgba(64,211,53,1), rgba(16,89,11,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(64,211,53,1), rgba(16,89,11,1))" // Standard syntax //
 				})
-			$(".nav-link, .nav-link:hover").css("color", "rgba(48,156,40,1)"); //green nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover").css("color", "rgba(48,156,40,1)"); //green nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(42,136,35,1)");
 			$(".mobile-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active").css("color", "rgba(48,156,40,1)"); //green nav items mobile//
 		};
@@ -354,11 +442,78 @@
 		});
 	});
 
+	//Hide bg-top and show content on nav-item click//
+
 	$(document).ready(function(){
 		$(".nav-link").click(function(){
-			$(".navbar").animate({top: "0px"}).removeClass("navbar-fixed-bottom");
+			$(".navbar").animate({top: $(window).height() - $(window).height()});
 			$(".bg-top").slideUp();
-			$(".music-bg").delay(200).fadeIn('fast');
+			$(".jd-link").delay(200).fadeIn('fast');
+		});
+	});
+
+	//When nav item is clicked, corresponding section slides up, hide others//
+
+	$(document).ready(function(){
+		$(".music-link").click(function(){
+			$(".design-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
+			$(".music-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".design-link").click(function(){
+			$(".music-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
+			$(".design-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".writing-link").click(function(){
+			$(".music-bg, .design-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
+			$(".writing-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".about-link").click(function(){
+			$(".music-bg, .design-bg, .writing-bg, .contact-bg, .blog-bg").fadeOut('fast');
+			$(".about-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".contact-link").click(function(){
+			$(".music-bg, .design-bg, .writing-bg, .about-bg, .blog-bg").fadeOut('fast');
+			$(".contact-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	$(document).ready(function(){
+		$(".blog-link").click(function(){
+			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg").fadeOut('fast');
+			$(".blog-bg").show('slide',{direction:'up'},200);
+		});
+	});
+
+	//Hide content and show bg-top when home button is clicked//
+
+	$(document).ready(function(){
+		$(".jd-link").click(function(){
+			var navHeight = $(".navbar").height();
+			$(".navbar").animate({top: $(window).height() - navHeight});
+			$(".bg-top").slideDown();
+			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg").delay(200).fadeOut('fast');
+			$(".jd-link").delay(200).fadeOut('fast');
+		})
+	})
+
+	//Hide bg-top and show content MOBILE//
+
+	$(document).ready(function(){
+		$(".mobile-link").click(function(){
+			$(".bg-top").slideUp();
+			$(".content-bg").delay(200).fadeIn('fast');
 		});
 	});
 
