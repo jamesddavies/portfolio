@@ -187,6 +187,23 @@
 			color: rgba(12,111,196,1);
 		}
 
+		.close-link {
+			display: block;
+			padding: 10px 20px 10px 10px;
+			margin: 0 auto;
+			cursor: pointer;
+		}
+
+		.close-link:hover {
+			text-decoration: none;
+			color: rgba(12,111,196,1);
+		}
+
+		.close-link:focus, .close-link:active {
+			text-decoration: none;
+			color: rgba(12,111,196,1);
+		}
+
 
 		/*CONTENT BACKGROUND DIV*/
 
@@ -328,32 +345,26 @@
 
 	
 		<div class="music-bg" id="music">
-
 			<p class="test-p">music</p>
 		</div>
 
 		<div class="design-bg" id="design">
-			
 			<p class="test-p">design</p>
 		</div>
 
 		<div class="writing-bg" id="writing">
-			
 			<p class="test-p">writing</p>
 		</div>
 
 		<div class="about-bg" id="about">
-		
 			<p class="test-p">about</p>
 		</div>
 
 		<div class="contact-bg" id="contact">
-			
 			<p class="test-p">contact</p>
 		</div>
 
 		<div class="blog-bg" id="blog">
-			
 			<p class="test-p">blog</p>
 		</div>
 	
@@ -379,7 +390,7 @@
 				});
 			$(".jd-link, .nav-link, .nav-link:hover").css("color", "rgba(12,111,196,1)"); //blue nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(8,110,190,1)");
-			$(".mobile-ul, .mobile-link:hover, .mobile-link:focus, .mobile-link:active").css("color", "rgba(12,111,196,1)"); //blue nav items mobile//
+			$(".mobile-ul, .close-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active, .close-link:hover, .close-link:focus, .close-link:active").css("color", "rgba(12,111,196,1)"); //blue nav items mobile//
 		} else if (bgnum < 0.66) {
 			$(".bg-top, .design-bg, .about-bg, .blog-bg").css({
 				"background-color": "rgba(235,30,30,1)",
