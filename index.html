@@ -277,9 +277,7 @@
 
 		/*BLOG SECTION*/
 
-		.tumblr-blog {
-			margin: 0 auto;
-		}
+		
 
 		/*Responsive design*/
 
@@ -373,7 +371,7 @@
 		<div class="blog-bg" id="blog">
 			<p class="test-p">blog</p>
 			<div class="text-center">
-			<iframe class="tumblr-blog" src="https://jamesddavies.tumblr.com/" width="90%" height="550" frameborder="0"></iframe>
+			<iframe class="tumblr-blog" width="90%" height="550" frameborder="0"></iframe>
 			</div>
 		</div>
 	
@@ -510,6 +508,7 @@
 		$(".blog-link").click(function(){
 			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg").fadeOut('fast');
 			$(".blog-bg").show('slide',{direction:'up'},200);
+			$(".tumblr-blog").attr("src", "https://jamesddavies.tumblr.com/");
 		});
 	});
 
@@ -522,8 +521,8 @@
 			$(".navbar").animate({top: $(window).height() - navHeight});
 			$(".bg-top").slideDown();
 			$(".jd-link").delay(300).fadeOut('slow');
-		})
-	})
+		});
+	});
 
 	//MOBILE//
 
