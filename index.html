@@ -594,6 +594,7 @@
 
 	$(document).ready(function(){
 		$(".musicmlink").click(function(){
+			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
 			$(".design-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
 			$(".music-bg").show('slide',{direction:'up'},200);
 		});
@@ -601,6 +602,7 @@
 
 	$(document).ready(function(){
 		$(".designmlink").click(function(){
+			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
 			$(".music-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
 			$(".design-bg").show('slide',{direction:'up'},200);
 		});
@@ -608,6 +610,7 @@
 
 	$(document).ready(function(){
 		$(".writingmlink").click(function(){
+			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
 			$(".music-bg, .design-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
 			$(".writing-bg").show('slide',{direction:'up'},200);
 		});
@@ -615,6 +618,7 @@
 
 	$(document).ready(function(){
 		$(".aboutmlink").click(function(){
+			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
 			$(".music-bg, .design-bg, .writing-bg, .contact-bg, .blog-bg").fadeOut('fast');
 			$(".about-bg").show('slide',{direction:'up'},200);
 		});
@@ -622,6 +626,7 @@
 
 	$(document).ready(function(){
 		$(".contactmlink").click(function(){
+			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
 			$(".music-bg, .design-bg, .writing-bg, .about-bg, .blog-bg").fadeOut('fast');
 			$(".contact-bg").show('slide',{direction:'up'},200);
 		});
@@ -631,6 +636,9 @@
 		$(".blogmlink").click(function(){
 			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg").fadeOut('fast');
 			$(".blog-bg").show('slide',{direction:'up'},200);
+			$(".tumblr-blog").queue( function() {
+				$(".tumblr-blog").attr("src", "https://jamesddavies.tumblr.com/");
+				$(this).dequeue();
 		});
 	});
 
