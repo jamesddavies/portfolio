@@ -277,7 +277,39 @@
 
 		/*BLOG SECTION*/
 
-		
+		.blog-h {
+			font-size: 48px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			margin-left: 50px;
+			color: rgba(255,255,255,1);
+			display: inline;
+		}
+
+		.blog-p {
+			font-size: 20px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+			margin-left: 1000px;
+			display: inline;
+		}
+
+		.blog-p a {
+			color: rgba(255,255,255,1);
+			opacity: 0.8;
+			filter: Alpha(opacity=80);
+		}
+
+		.blog-p a:hover {
+			color: rgba(255,255,255,1);
+			opacity: 1;
+			filter: Alpha(opacity=100);
+			text-decoration: none;
+		}
+
+		.blog-p a:focus, .blog-p a:active {
+			text-decoration: none;
+		}
 
 		/*Responsive design*/
 
@@ -369,7 +401,8 @@
 		</div>
 
 		<div class="blog-bg" id="blog">
-			<p class="test-p">blog</p>
+			<p class="blog-h">blog</p>
+			<p class="blog-p"><a href="https://jamesddavies.tumblr.com" target="_blank">view on tumblr</a></p>
 			<div class="text-center">
 			<iframe class="tumblr-blog" width="90%" height="550" frameborder="0"></iframe>
 			</div>
