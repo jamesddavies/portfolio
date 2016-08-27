@@ -221,7 +221,7 @@
 		
 		.music-bg {
 			width: 100%;
-			height: 100vh;
+			height: auto;
 			background-color: rgba(255,255,255,1);
 			display: none;
 			position: absolute;
@@ -303,7 +303,7 @@
 
 		.tuition {
 			width: 560px;
-			height: 100px;
+			height: 220px;
 			margin-top: 20px;
 			margin-left: -55px;
 			text-align: center;
@@ -314,7 +314,15 @@
 			font-weight: 400;
 			font-size: 1.8em;
 			color: rgba(255,255,255,1);
-			padding-top: 10px
+			padding: 10px
+		}
+
+		.tuition-info {
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+			font-size: 1.2em;
+			color: rgba(255,255,255,1);
+			padding: 10px
 		}
 
 		.tuition-btn {
@@ -337,7 +345,9 @@
 
 		.music-textbox {
 			margin-top: 20px;
+			margin-bottom: 20px;
 			width: 300px;
+			height: auto;
 			position: absolute;
 			right: 50px;
 			text-align: justify;
@@ -345,10 +355,21 @@
 			font-family: 'Raleway', sans-serif;
 			font-weight: 400;
 			font-size: 1.15em;
+
 		}
 
 		.music-text {
-			padding: 20px;
+			padding: 20px 20px 10px 20px;
+		}
+
+		.music-text a {
+			color: rgba(255,255,255,1);
+			font-weight: bold;
+		}
+
+		.music-text a:hover, .music-text a:focus, .music-text a:active {
+			color: rgba(220,220,220,1);
+			text-decoration: none;
 		}
 
 		/*DESIGN SECTION*/
@@ -512,12 +533,13 @@
 
 						<div class="tuition">
 							<p class="tuition-text">James Davies Guitar Tuition</p>
-							<a href="https://www.facebook.com/JamesDaviesGuitarTuition/" target="_blank" rel="noopener noreferrer"><button class="btn tuition-btn">See More</button></a>
+							<p class="tuition-info">All styles and abilities taught<br>Competitive rates<br>jamesdaviesguitartuition@gmail.com - 07970 780539</p>
+							<a href="https://www.facebook.com/JamesDaviesGuitarTuition/" target="_blank" rel="noopener noreferrer"><button class="btn tuition-btn">More info</button></a>
 						</div>
 
 					</div>
 					<div class="col-md-4 music-col music-textbox">
-						<p class="music-text">I first picked up a guitar at the age of 11 and I've been in love with it ever since. I try and play as many styles as I can, dabbling in jazz, funk, country, folk... but my main love and passion is (and probably always will be) rock and pop music. I started singing out of necessity (our band needed a singer) when I was around 16, and similarly, I started writing songs because we needed stuff to play! That band was called Stars & Flights, and we played together for about 5 years before calling it a day. I'm currently writing and demoing material for a new band. I also play as a session guitarist, working in pit orchestras and tribute bands.</p>
+						<p class="music-text">I'm a guitarist, singer and songwriter. I first picked up a guitar at the age of 11, and I've been in love with it ever since. I try and play as many styles as I can, dabbling in jazz, funk, country, folk... but my main love and passion is (and probably always will be) rock and pop music. I started singing out of necessity (my band needed a singer) when I was around 16, and similarly, I started writing songs because we needed stuff to play! That band was called <a href="https://www.google.co.uk/#q=stars+and+flights">Stars & Flights</a>, and we played together for about 5 years before calling it a day. I'm currently writing and demoing material for a new band. I play as a session guitarist, working in pit orchestras and tribute bands. I also play bass guitar and (attempt to) play the piano. I'm a qualified secondary school music teacher as well as a private guitar teacher. Head over to my contact page if you want to hire me or discuss guitar lessons!</p>
 					</div>
 				</div>
 			</div>
@@ -649,11 +671,12 @@
 			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
 			$(".design-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
 			$(".music-bg").show('slide',{direction:'up'},200);
-			$("#spotify, #youtube").queue( function() {
+			setTimeout(function(){
+			
 				$("#spotify").attr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
 				$("#youtube").attr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
-				$(this).dequeue();
-			});
+			
+			},500);
 		});
 	});
 
@@ -703,10 +726,9 @@
 			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg").fadeOut('fast');
 			$(".blog-bg").show('slide',{direction:'up'},200);
-			$(".tumblr-blog").queue( function() {
+			setTimeout(function() {
 				$(".tumblr-blog").attr("src", "https://jamesddavies.tumblr.com/");
-				$(this).dequeue();
-			});
+			},500);
 		});
 	});
 
@@ -716,6 +738,8 @@
 		$(".jd-link").click(function(){
 			var navHeight = $(".navbar").height();
 			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
+			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
+			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").delay(200).fadeOut('fast');
 			$(".navbar").animate({top: $(window).height() - navHeight});
 			$(".bg-top").slideDown();
