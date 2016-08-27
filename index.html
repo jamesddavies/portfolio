@@ -275,6 +275,123 @@
 			font-weight: 700;
 		}
 
+		/*MUSIC SECTION*/
+
+		.music-h {
+			font-size: 48px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			margin-left: 50px;
+			display: inline;
+		}
+
+		.music-col {
+			margin: 0;
+			padding: 0;
+		}
+
+		#spotify {
+			margin-top: 20px;
+			margin-left: 50px;
+		}
+
+		#youtube {
+			margin-top: 20px;
+			margin-left: -55px;
+		}
+
+		.tuition {
+			width: 560px;
+			height: 100px;
+			margin-top: 20px;
+			margin-left: -55px;
+			text-align: center;
+		}
+
+		.tuition-text {
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+			font-size: 1.8em;
+			color: rgba(255,255,255,1);
+			padding-top: 10px
+		}
+
+		.tuition-btn {
+			border-radius: 0px;
+			background: transparent;
+			border: 2px solid rgba(255,255,255,1);
+			color: rgba(255,255,255,1);
+			font-family: 'Raleway', sans-serif;
+		}
+
+		.tuition-btn:hover {
+			background: rgba(255,255,255,1);
+			border: 2px solid rgba(255,255,255,1);
+		}
+
+		button.btn:focus, button.btn:active {
+			outline: none !important;
+			color: rgba(135,217,245,1);
+		}
+
+		.music-textbox {
+			margin-top: 20px;
+			width: 300px;
+			position: absolute;
+			right: 50px;
+			text-align: justify;
+			color: rgba(255,255,255,1);
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+			font-size: 1.15em;
+		}
+
+		.music-text {
+			padding: 20px;
+		}
+
+		/*DESIGN SECTION*/
+
+		.design-h {
+			font-size: 48px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			margin-left: 50px;
+			color: rgba(255,255,255,1);
+			display: inline;
+		}
+
+		/*WRITING SECTION*/
+
+		.writing-h {
+			font-size: 48px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			margin-left: 50px;
+			display: inline;
+		}
+
+		/*ABOUT SECTION*/
+
+		.about-h {
+			font-size: 48px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			margin-left: 50px;
+			color: rgba(255,255,255,1);
+			display: inline;
+		}
+
+		/*CONTACT SECTION*/
+
+		.contact-h {
+			font-size: 48px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 700;
+			margin-left: 50px;
+			display: inline;
+		}
+
 		/*BLOG SECTION*/
 
 		.blog-h {
@@ -286,31 +403,7 @@
 			display: inline;
 		}
 
-		.blog-p {
-			font-size: 20px;
-			font-family: 'Raleway', sans-serif;
-			font-weight: 400;
-			margin-left: 1000px;
-			display: inline;
-		}
-
-		.blog-p a {
-			color: rgba(255,255,255,1);
-			opacity: 0.8;
-			filter: Alpha(opacity=80);
-		}
-
-		.blog-p a:hover {
-			color: rgba(255,255,255,1);
-			opacity: 1;
-			filter: Alpha(opacity=100);
-			text-decoration: none;
-		}
-
-		.blog-p a:focus, .blog-p a:active {
-			text-decoration: none;
-		}
-
+		
 		/*Responsive design*/
 
 		@media (max-width: 1000px) {
@@ -381,28 +474,48 @@
 
 	
 		<div class="music-bg" id="music">
-			<p class="test-p">music</p>
+			<p class="music-h">music</p>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4 music-col">
+						<iframe src="https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5" width="300" height="420" frameborder="0" allowtransparency="true" id="spotify"></iframe>
+					</div>
+					<div class="col-md-4 music-col">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd" frameborder="0" allowfullscreen id="youtube"></iframe>
+
+						<div class="tuition">
+							<p class="tuition-text">James Davies Guitar Tuition</p>
+							<button class="btn tuition-btn">See More</button>
+						</div>
+
+					</div>
+					<div class="col-md-4 music-col music-textbox">
+						<p class="music-text">I first picked up a guitar at the age of 11 and I've been in love with it ever since. I try and play as many styles as I can, dabbling in jazz, funk, country, folk... but my main love and passion is (and probably always will be) rock and pop music. I started singing out of necessity (our band needed a singer) when I was around 16, and similarly, I started writing songs because we needed stuff to play! That band was called Stars & Flights, and we played together for about 5 years before calling it a day. I'm currently writing and demoing material for a new band. I also play as a session guitarist, working in pit orchestras and tribute bands.</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 		<div class="design-bg" id="design">
-			<p class="test-p">design</p>
+			<p class="design-h">design</p>
 		</div>
 
 		<div class="writing-bg" id="writing">
-			<p class="test-p">writing</p>
+			<p class="writing-h">writing</p>
 		</div>
 
 		<div class="about-bg" id="about">
-			<p class="test-p">about</p>
+			<p class="about-h">about</p>
 		</div>
 
 		<div class="contact-bg" id="contact">
-			<p class="test-p">contact</p>
+			<p class="contact-h">contact</p>
 		</div>
 
 		<div class="blog-bg" id="blog">
 			<p class="blog-h">blog</p>
-			<p class="blog-p"><a href="https://jamesddavies.tumblr.com" target="_blank">view on tumblr</a></p>
 			<div class="text-center">
 			<iframe class="tumblr-blog" width="90%" height="550" frameborder="0"></iframe>
 			</div>
@@ -421,38 +534,41 @@
 	$(window).load(function(){
 		var bgnum = Math.random();
 		if (bgnum < 0.33) {
-			$(".bg-top, .design-bg, .about-bg, .blog-bg").css({
+			$(".bg-top, .design-bg, .about-bg, .blog-bg, .music-textbox, .tuition").css({
 				"background-color": "rgba(98,178,246,1)",
 				"background": "-webkit-linear-gradient(left top, rgba(98,178,246,1), rgba(3,89,162,1))", // For Safari 5.1 to 6.0 // //blue background//
   				"background": "-o-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1))", // For Opera 11.1 to 12.0 //
   				"background": "-moz-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(98,178,246,1), rgba(3,89,162,1))" // Standard syntax //
 				});
-			$(".jd-link, .nav-link, .nav-link:hover").css("color", "rgba(12,111,196,1)"); //blue nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover").css("color", "rgba(12,111,196,1)"); //blue nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(8,110,190,1)");
 			$(".mobile-ul, .close-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active, .close-link:hover, .close-link:focus, .close-link:active").css("color", "rgba(12,111,196,1)"); //blue nav items mobile//
+			$(".music-h, .writing-h, .contact-h").css("color", "rgba(25,123,207,1)"); //blue page headings//
 		} else if (bgnum < 0.66) {
-			$(".bg-top, .design-bg, .about-bg, .blog-bg").css({
+			$(".bg-top, .design-bg, .about-bg, .blog-bg, .music-textbox, .tuition").css({
 				"background-color": "rgba(235,30,30,1)",
 				"background": "-webkit-linear-gradient(left top, rgba(235,30,30,1), rgba(154,20,20,1))", // For Safari 5.1 to 6.0 // //red background//
   				"background": "-o-linear-gradient(bottom right, rgba(235,30,30,1), rgba(154,20,20,1))", // For Opera 11.1 to 12.0 //
   				"background": "-moz-linear-gradient(bottom right, rgba(235,30,30,1), rgba(154,20,20,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(235,30,30,1), rgba(154,20,20,1))" // Standard syntax //
 				})
-			$(".jd-link, .nav-link, .nav-link:hover").css("color", "rgba(216,27,27,1)"); //red nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover").css("color", "rgba(216,27,27,1)"); //red nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(185,24,24,1)");
 			$(".mobile-link, .close-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active, .close-link:hover, .close-link:focus, .close-link:active").css("color", "rgba(216,27,27,1)"); //red nav items mobile//
+			$(".music-h, .writing-h, .contact-h").css("color", "rgba(181,11,11,1)"); //red page headings//
 		} else {
-			$(".bg-top, .design-bg, .about-bg, .blog-bg").css({
+			$(".bg-top, .design-bg, .about-bg, .blog-bg, .music-textbox, .tuition").css({
 				"background-color": "rgba(20,181,8,1)",
 				"background": "-webkit-linear-gradient(left top, rgba(64,211,53,1), rgba(16,89,11,1))", // For Safari 5.1 to 6.0 // //green background//
   				"background": "-o-linear-gradient(bottom right, rgba(64,211,53,1), rgba(16,89,11,1))", // For Opera 11.1 to 12.0 //
   				"background": "-moz-linear-gradient(bottom right, rgba(64,211,53,1), rgba(16,89,11,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(64,211,53,1), rgba(16,89,11,1))" // Standard syntax //
 				})
-			$(".jd-link, .nav-link, .nav-link:hover").css("color", "rgba(48,156,40,1)"); //green nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover").css("color", "rgba(48,156,40,1)"); //green nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(42,136,35,1)");
 			$(".mobile-link, .close-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active, .close-link:hover, .close-link:focus, .close-link:active").css("color", "rgba(48,156,40,1)"); //green nav items mobile//
+			$(".music-h, .writing-h, .contact-h").css("color", "rgba(36,133,29,1)"); //green page headings//
 		};
 	});
 
@@ -639,8 +755,8 @@
 			$(".tumblr-blog").queue( function() {
 				$(".tumblr-blog").attr("src", "https://jamesddavies.tumblr.com/");
 				$(this).dequeue();
-                        });
 		});
+	});
 	});
 
 	//Take margin off content sections for MOBILE//
