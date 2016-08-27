@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -104,6 +104,7 @@
 			font-size: 1.5em;
 			vertical-align: middle;
 			line-height: normal;
+			list-style-type: none;
 		}
 
 		.jd-link {
@@ -504,10 +505,10 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-4 music-col">
-						<iframe src="https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5" width="300" height="490" frameborder="0" allowtransparency="true" id="spotify"></iframe>
+						<iframe width="300" height="490" frameborder="0" allowtransparency="true" id="spotify"></iframe>
 					</div>
 					<div class="col-md-4 music-col">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd" frameborder="0" allowfullscreen id="youtube"></iframe>
+						<iframe width="560" height="315" frameborder="0" allowfullscreen id="youtube"></iframe>
 
 						<div class="tuition">
 							<p class="tuition-text">James Davies Guitar Tuition</p>
@@ -648,12 +649,19 @@
 			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
 			$(".design-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
 			$(".music-bg").show('slide',{direction:'up'},200);
+			$("#spotify, #youtube").queue( function() {
+				$("#spotify").attr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
+				$("#youtube").attr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
+				$(this).dequeue();
+			});
 		});
 	});
 
 	$(document).ready(function(){
 		$(".design-link").click(function(){
 			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
+			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
+			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
 			$(".design-bg").show('slide',{direction:'up'},200);
 		});
@@ -662,6 +670,8 @@
 	$(document).ready(function(){
 		$(".writing-link").click(function(){
 			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
+			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
+			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .design-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
 			$(".writing-bg").show('slide',{direction:'up'},200);
 		});
@@ -670,6 +680,8 @@
 	$(document).ready(function(){
 		$(".about-link").click(function(){
 			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
+			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
+			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .design-bg, .writing-bg, .contact-bg, .blog-bg").fadeOut('fast');
 			$(".about-bg").show('slide',{direction:'up'},200);
 		});
@@ -678,6 +690,8 @@
 	$(document).ready(function(){
 		$(".contact-link").click(function(){
 			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
+			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
+			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .design-bg, .writing-bg, .about-bg, .blog-bg").fadeOut('fast');
 			$(".contact-bg").show('slide',{direction:'up'},200);
 		});
@@ -685,6 +699,8 @@
 
 	$(document).ready(function(){
 		$(".blog-link").click(function(){
+			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
+			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg").fadeOut('fast');
 			$(".blog-bg").show('slide',{direction:'up'},200);
 			$(".tumblr-blog").queue( function() {
