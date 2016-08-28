@@ -343,6 +343,10 @@
 			color: rgba(135,217,245,1);
 		}
 
+		.mobile-music-text {
+			display: none;
+		}
+
 		.music-textbox {
 			margin-top: 20px;
 			margin-bottom: 20px;
@@ -433,28 +437,41 @@
 			/*MUSIC SECTION CONTENT*/
 
 			#spotify {
-				margin: 0;
-				padding: 0;
-				margin-bottom: 20px;
+				display: none;
 			}
 
 			#youtube {
-				margin: 0;
-				padding: 0;
-				margin-bottom: 20px;
+				display: none;
 			}	
 
 			.tuition {
 				width: 100%;
+				height: 250px;
 				margin: 0 auto;
 				padding: 0;
 				margin-bottom: 20px;
+				clear: both;
+			}
+
+			.mobile-music-text {
+				display: block;
+				font-family: 'Raleway', sans-serif;
+				font-weight: 400;
+				font-size: 1.8em;
+				text-align: center;
+			}
+
+			.mobile-music-text a:hover, .mobile-music-text a:focus, .mobile-music-text a:active {
+				text-decoration: none;
 			}
 
 			.music-textbox {
-				width: 100%;
 				margin: 0;
-				padding: 0;
+				position: absolute;
+				right: 0;
+				width: 100%;
+				height: auto;
+				margin-top: 12px;
 			}
 
 		}
@@ -537,6 +554,8 @@
 							<a href="https://www.facebook.com/JamesDaviesGuitarTuition/" target="_blank" rel="noopener noreferrer"><button class="btn tuition-btn">More info</button></a>
 						</div>
 
+						<p class="mobile-music-text"><a href="https://open.spotify.com/artist/5XLQtc51DACu6R2jrEzhn5">Listen on Spotify</a><br><a href="https://www.youtube.com/watch?v=B6q0mVp4X3g&list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd">Watch on YouTube</a>
+
 					</div>
 					<div class="col-md-4 music-col music-textbox">
 						<p class="music-text">I'm a guitarist, singer and songwriter. I first picked up a guitar at the age of 11, and I've been in love with it ever since. I try and play as many styles as I can, dabbling in jazz, funk, country, folk... but my main love and passion is (and probably always will be) rock and pop music. I started singing out of necessity (my band needed a singer) when I was around 16, and similarly, I started writing songs because we needed stuff to play! That band was called <a href="https://www.google.co.uk/#q=stars+and+flights">Stars & Flights</a>, and we played together for about 5 years before calling it a day. I'm currently writing and demoing material for a new band. I play as a session guitarist, working in pit orchestras and tribute bands. I also play bass guitar and (attempt to) play the piano. I'm a qualified secondary school music teacher as well as a private guitar teacher. Head over to my contact page if you want to hire me or discuss guitar lessons!</p>
@@ -589,7 +608,7 @@
   				"background": "-moz-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(98,178,246,1), rgba(3,89,162,1))" // Standard syntax //
 				});
-			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover").css("color", "rgba(12,111,196,1)"); //blue nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover, .mobile-music-text a").css("color", "rgba(12,111,196,1)"); //blue nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(8,110,190,1)");
 			$(".mobile-ul, .close-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active, .close-link:hover, .close-link:focus, .close-link:active").css("color", "rgba(12,111,196,1)"); //blue nav items mobile//
 			$(".music-h, .writing-h, .contact-h").css("color", "rgba(25,123,207,1)"); //blue page headings//
@@ -601,7 +620,7 @@
   				"background": "-moz-linear-gradient(bottom right, rgba(235,30,30,1), rgba(154,20,20,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(235,30,30,1), rgba(154,20,20,1))" // Standard syntax //
 				})
-			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover").css("color", "rgba(216,27,27,1)"); //red nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover, .mobile-music-text a").css("color", "rgba(216,27,27,1)"); //red nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(185,24,24,1)");
 			$(".mobile-link, .close-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active, .close-link:hover, .close-link:focus, .close-link:active").css("color", "rgba(216,27,27,1)"); //red nav items mobile//
 			$(".music-h, .writing-h, .contact-h").css("color", "rgba(181,11,11,1)"); //red page headings//
@@ -613,7 +632,7 @@
   				"background": "-moz-linear-gradient(bottom right, rgba(64,211,53,1), rgba(16,89,11,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(64,211,53,1), rgba(16,89,11,1))" // Standard syntax //
 				})
-			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover").css("color", "rgba(48,156,40,1)"); //green nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover, .mobile-music-text a").css("color", "rgba(48,156,40,1)"); //green nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(42,136,35,1)");
 			$(".mobile-link, .close-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active, .close-link:hover, .close-link:focus, .close-link:active").css("color", "rgba(48,156,40,1)"); //green nav items mobile//
 			$(".music-h, .writing-h, .contact-h").css("color", "rgba(36,133,29,1)"); //green page headings//
