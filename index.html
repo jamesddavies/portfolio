@@ -705,7 +705,11 @@
 			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
 			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
-			$(".design-bg").show('slide',{direction:'up'},200);
+			setTimeout(function(){
+
+				$(".design-bg").show('slide',{direction:'up'},200);
+
+			},100);
 		});
 	});
 
@@ -715,7 +719,11 @@
 			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
 			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .design-bg, .about-bg, .contact-bg, .blog-bg").fadeOut('fast');
-			$(".writing-bg").show('slide',{direction:'up'},200);
+			setTimeout(function(){
+
+				$(".writing-bg").show('slide',{direction:'up'},200);
+
+			},100);
 		});
 	});
 
@@ -725,7 +733,11 @@
 			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
 			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .design-bg, .writing-bg, .contact-bg, .blog-bg").fadeOut('fast');
-			$(".about-bg").show('slide',{direction:'up'},200);
+			setTimeout(function(){
+
+				$(".about-bg").show('slide',{direction:'up'},200);
+
+			},100);
 		});
 	});
 
@@ -735,7 +747,11 @@
 			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
 			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
 			$(".music-bg, .design-bg, .writing-bg, .about-bg, .blog-bg").fadeOut('fast');
-			$(".contact-bg").show('slide',{direction:'up'},200);
+			setTimeout(function(){
+
+				$(".contact-bg").show('slide',{direction:'up'},200);
+				
+			},100);
 		});
 	});
 
@@ -764,7 +780,7 @@
 				$(".navbar").animate({top: $(window).height() - navHeight});
 				$(".bg-top").slideDown();
 				$(".jd-link").delay(300).fadeOut('slow');
-			},200);
+			},100);
 		});
 	});
 
