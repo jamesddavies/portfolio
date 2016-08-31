@@ -759,10 +759,12 @@
 			$(".tumblr-blog").removeAttr("src", "https://jamesddavies.tumblr.com/");
 			$("#spotify").removeAttr("src", "https://embed.spotify.com/?uri=spotify:artist:5XLQtc51DACu6R2jrEzhn5");
 			$("#youtube").removeAttr("src", "https://www.youtube.com/embed/videoseries?list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd");
-			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").delay(200).fadeOut('fast');
-			$(".navbar").animate({top: $(window).height() - navHeight});
-			$(".bg-top").slideDown();
-			$(".jd-link").delay(300).fadeOut('slow');
+			setTimeout(function() {
+				$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg, .blog-bg").delay(200).fadeOut('fast');
+				$(".navbar").animate({top: $(window).height() - navHeight});
+				$(".bg-top").slideDown();
+				$(".jd-link").delay(300).fadeOut('slow');
+			},200);
 		});
 	});
 
