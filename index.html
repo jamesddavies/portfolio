@@ -230,7 +230,7 @@
 
 		.design-bg {
 			width: 100%;
-			height: 100vh;
+			height: auto;
 			display: none;
 			position: absolute;
 			margin-top: 60px;
@@ -275,6 +275,7 @@
 			font-family: 'Raleway', sans-serif;
 			font-weight: 700;
 		}
+
 
 		/*MUSIC SECTION*/
 
@@ -387,6 +388,68 @@
 			display: inline;
 		}
 
+		.design-text {
+			margin-top: 20px;
+			font-size: 1.15em;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+			text-align: justify;
+			color: rgba(255,255,255,1);
+			padding: 20px;
+		}
+
+		.design-text a {
+			color: rgba(255,255,255,1);
+			font-weight: bold;
+		}
+
+		.design-text a:hover, .design-text a:focus, .design-text a:active {
+			color: rgba(220,220,220,1);
+			text-decoration: none;
+		}
+
+		.skills-h {
+			font-size: 36px;
+			font-family: 'Raleway', sans-serif;
+			font-weight: 600;
+			color: rgba(255,255,255,1);
+			padding: 0 20px 20px 20px;
+		}
+
+		.skills-h-small {
+			font-size: 14px;
+		}
+
+		.skills-img {
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+
+		.skills-img:hover {
+			animation-name: pulse;
+			animation-duration: 500ms;
+			animation-timing-function: linear;
+			-webkit-animation-name: pulse;
+			-webkit-animation-duration: 500ms;
+			-webkit-animation-timing-function: linear;
+			-moz-animation-name: pulse;
+			-moz-animation-duration: 500ms;
+			-moz-animation-timing-function: linear;
+		}
+
+		@keyframes pulse {
+			0% {transform: scale(1);}
+			25% {transform: scale(1.2);}
+			50% {transform: scale(1);}
+			75% {transform: scale(1.05);}
+			100% {transform: scale(1);}
+		}
+
+		.portfolio-img {
+			margin-bottom: 10px;
+			
+		}
+
 		/*WRITING SECTION*/
 
 		.writing-h {
@@ -434,6 +497,8 @@
 
 		@media (max-width: 1000px) {
 
+			
+
 			/*MUSIC SECTION CONTENT*/
 
 			#spotify {
@@ -480,6 +545,19 @@
 
 			h1 {
 				font-size: 4em;
+			}
+
+			/*DESIGN PAGE*/
+
+
+			.skills-img {
+				
+			}
+
+			.skills-img:hover {
+				animation-name: none;
+				-webkit-animation-name: none;
+				-moz-animation-name: none;
 			}
 
 
@@ -538,8 +616,9 @@
 
 	
 		<div class="music-bg" id="music">
-			<p class="music-h">music</p>
 
+			<p class="music-h">music</p>
+			
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-4 music-col">
@@ -566,7 +645,59 @@
 		</div>
 
 		<div class="design-bg" id="design">
+
 			<p class="design-h">design</p>
+
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4">
+						<p class="design-text">I've been learning web development since June 2016, focusing on HTML, CSS and Javascript. I'm learning through a combination of online tutorials (courtesy of <a href="https://www.freecodecamp.com">FreeCodeCamp</a> and <a href="https://www.codecademy.com">Codecademy</a>, among others) and building my own projects, such as this website. I'm always open to constructive criticism so if you have any, please head over to my Contact page and get in touch! I'm loving the learning process so far (especially the problem solving nature of coding and web development) and I'm hoping to take the skills I learn into a career in web development and design.</p>
+
+						<p class="skills-h">Skills <span class="skills-h-small">(so far...)</span></p>
+
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-4 skill-img-col">
+									<img class="img-responsive skills-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473102756/html5-logo_p2emyq.png">
+								</div>
+								<div class="col-md-4 skill-img-col">
+									<img class="img-responsive skills-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473102751/css3-logo_todhuk.png">
+								</div>
+								<div class="col-md-4 skill-img-col">
+									<img class="img-responsive skills-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473102760/javscript-logo_zyscr1.png">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 skill-img-col">
+									<img class="img-responsive skills-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473103537/jQuery_logo_bjrqzd.gif">
+								</div>
+								<div class="col-md-4 skill-img-col">
+									<img class="img-responsive skills-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473103431/photoshop_logo_y4euhi.png">
+								</div>
+								<div class="col-md-4 skill-img-col">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<p class="skills-h">Work</p>
+						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105418/jamesdavies-website_bcqkoo.png">
+						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+					</div>
+
+					<div class="col-md-4">
+						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105426/photo-site_akd4xh.png">
+						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 		<div class="writing-bg" id="writing">
@@ -767,6 +898,7 @@
 			},150);
 		});
 	});
+
 
 	//MOBILE//
 
