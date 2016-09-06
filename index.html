@@ -165,10 +165,13 @@
 			width: 80%;
 			color: rgba(12,111,196,1);
 			background-color: rgba(255,255,255,1);
-			position: absolute;
+			position: fixed;
 			right: 0;
-			z-index: 1;
-			display: none;
+			z-index: 1000;
+			transform: translate(100%);
+			transition: 500ms;
+			transition-timing-function: ease-out;
+			box-shadow: 2px 2px 5px black;
 		}
 
 		.mobile-link {
@@ -270,10 +273,18 @@
 			margin-top: 60px;
 		}
 
-		.test-p {
-			font-size: 48px;
-			font-family: 'Raleway', sans-serif;
-			font-weight: 700;
+		/*MOBILE PAGE MENU*/
+
+		.mobile-menu-icon-pg {
+			display: none;
+			position: fixed;
+			right: 75px;
+			top: -35px;
+			z-index: 100;
+		}
+
+		.burger {
+			color: rgba(0,0,0,1);
 		}
 
 
@@ -360,7 +371,7 @@
 			font-family: 'Raleway', sans-serif;
 			font-weight: 400;
 			font-size: 1.15em;
-
+			z-index: 0;
 		}
 
 		.music-text {
@@ -447,7 +458,6 @@
 
 		.portfolio-img {
 			margin-bottom: 10px;
-			
 		}
 
 		/*WRITING SECTION*/
@@ -570,13 +580,7 @@
 
 <body>
 
-	<div class="bg-top">
-
-			<!--Mobile Nav-->
-			<div class="mobile-menu-icon">
-				<i class="fa fa-bars fa-4x" aria-hidden="true"></i>
-			</div>
-
+	<!--Mobile Nav-->
 			<div class="mobile-nav">
 				<ul class="mobile-ul">
 					<li><a class="mobile-link musicmlink" href="#music">music</a></li>
@@ -589,6 +593,11 @@
 				</ul>
 			</div>
 
+	<div class="bg-top">
+
+			<div class="mobile-menu-icon">
+				<i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+			</div>
 
 			<!--name, intro paragraph-->
 			<h1>j<span class="jd-thin">ames</span>d<span class="jd-thin">avies</span></h1>
@@ -618,6 +627,10 @@
 		<div class="music-bg" id="music">
 
 			<p class="music-h">music</p>
+
+			<div class="mobile-menu-icon-pg">
+				<i class="fa fa-bars fa-3x burger" aria-hidden="true"></i>
+			</div>
 			
 			<div class="container-fluid">
 				<div class="row">
@@ -647,6 +660,10 @@
 		<div class="design-bg" id="design">
 
 			<p class="design-h">design</p>
+
+			<div class="mobile-menu-icon-pg">
+				<i class="fa fa-bars fa-3x burger" aria-hidden="true"></i>
+			</div>
 
 			<div class="container-fluid">
 				<div class="row">
@@ -701,19 +718,43 @@
 		</div>
 
 		<div class="writing-bg" id="writing">
+
 			<p class="writing-h">writing</p>
+
+			<div class="mobile-menu-icon-pg">
+				<i class="fa fa-bars fa-3x burger" aria-hidden="true"></i>
+			</div>
+
 		</div>
 
 		<div class="about-bg" id="about">
+
 			<p class="about-h">about</p>
+
+			<div class="mobile-menu-icon-pg">
+				<i class="fa fa-bars fa-3x burger" aria-hidden="true"></i>
+			</div>
+
 		</div>
 
 		<div class="contact-bg" id="contact">
+
 			<p class="contact-h">contact</p>
+
+			<div class="mobile-menu-icon-pg">
+				<i class="fa fa-bars fa-3x burger" aria-hidden="true"></i>
+			</div>
+
 		</div>
 
 		<div class="blog-bg" id="blog">
+
 			<p class="blog-h">blog</p>
+
+			<div class="mobile-menu-icon-pg">
+				<i class="fa fa-bars fa-3x burger" aria-hidden="true"></i>
+			</div>
+
 			<div class="text-center">
 			<iframe class="tumblr-blog" width="90%" height="550" frameborder="0"></iframe>
 			</div>
@@ -799,8 +840,9 @@
 	$(document).ready(function(){
 		if ($(window).width() <= 1000) {
 			$(".mobile-menu-icon").delay(4000).fadeIn('slow');
+			$(".mobile-menu-icon-pg").show();
 		} else {
-			$(".mobile-menu-icon").hide();
+			$(".mobile-menu-icon, .mobile-menu-icon-pg").hide();
 		};
 	});
 
@@ -904,15 +946,15 @@
 
 	//Slide mobile menu when icon is clicked//
 	$(document).ready(function(){
-		$(".mobile-menu-icon").click(function(){
-			$(".mobile-ul").show('slide',{direction:'right'},400);
+		$(".mobile-menu-icon, .mobile-menu-icon-pg").click(function(){
+			$(".mobile-ul").css("transform", "translate(0%)");
 		});
 	});
 
 	//Hide mobile menu when menu item is clicked//
 	$(document).ready(function(){
 		$(".mobile-link, .close-link").click(function(){
-			$(".mobile-ul").hide('slide',{direction:'right'},400);
+			$(".mobile-ul").css("transform", "translate(100%)");
 		});
 	});
 
