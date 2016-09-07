@@ -50,6 +50,8 @@
 			position: relative;
 			top: 210px;
 			cursor: default;
+			transition: 350ms;
+			transition-timing-function: linear;
 		}
 
 		.jd-thin {
@@ -772,7 +774,9 @@
 
 	//move name heading//
 	$(document).ready(function(){
-		$("h1").delay(2000).animate({top: "140px"});
+		setTimeout(function(){
+			$("h1").css("transform", "translateY(-70px)");
+		},2000);
 	});
 
 	//hi//
