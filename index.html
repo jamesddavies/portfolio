@@ -27,10 +27,6 @@
 			overflow-x: hidden;
 		}
 
-		.body-overflow {
-			overflow-y: hidden;
-		}
-
 		/*landing page*/
 
 		.bg-top {
@@ -336,7 +332,7 @@
 			color: rgba(135,217,245,1);
 		}
 
-		.mobile-music-text {
+		.music-logos {
 			display: none;
 		}
 
@@ -501,15 +497,23 @@
 				clear: both;
 			}
 
-			.mobile-music-text {
+			.music-logos {
 				display: block;
-				font-family: 'Raleway', sans-serif;
-				font-weight: 400;
-				font-size: 1.8em;
 				text-align: center;
 			}
 
-			.mobile-music-text a:hover, .mobile-music-text a:focus, .mobile-music-text a:active {
+			.music-img-logo {
+				max-height: 75px;
+				margin: 0 auto;
+			}
+
+			.mobile-music-text {
+				font-family: 'Raleway', sans-serif;
+				font-weight: 400;
+				font-size: 1.2em;
+			}
+
+			.music-logos a:hover, .music-logos a:focus, .music-logos a:active {
 				text-decoration: none;
 			}
 
@@ -520,6 +524,7 @@
 				width: 100%;
 				height: auto;
 				margin-top: 12px;
+				padding: 18px;
 			}
 
 		}
@@ -619,7 +624,16 @@
 							<a href="https://www.facebook.com/JamesDaviesGuitarTuition/" target="_blank" rel="noopener noreferrer"><button class="btn tuition-btn">More info</button></a>
 						</div>
 
-						<p class="mobile-music-text"><a target="_blank" href="https://open.spotify.com/artist/5XLQtc51DACu6R2jrEzhn5">Listen on Spotify</a><br><a target="_blank" href="https://www.youtube.com/watch?v=B6q0mVp4X3g&list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd">Watch on YouTube</a>
+						<div class="row music-logos">
+							<div class="col-sm-6">
+								<a target="_blank" href="https://open.spotify.com/artist/5XLQtc51DACu6R2jrEzhn5"><img class="img-responsive music-img-logo" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473367278/spotify_logo_rnhzsc.png"></a>
+								<p class="mobile-music-text"><a target="_blank" href="https://open.spotify.com/artist/5XLQtc51DACu6R2jrEzhn5">Listen</a></p>
+							</div>
+							<div class="col-sm-6">
+								<a target="_blank" href="https://www.youtube.com/watch?v=B6q0mVp4X3g&list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd"><img class="img-responsive music-img-logo" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473367277/youtube_logo_fmbjdo.png"></a>
+								<p class="mobile-music-text"><a target="_blank" href="https://www.youtube.com/watch?v=B6q0mVp4X3g&list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd">Watch</a></p>
+							</div>
+						</div>
 
 					</div>
 					<div class="col-md-4 music-col music-textbox">
