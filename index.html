@@ -142,6 +142,18 @@
 
 		/*mobile nav*/
 
+		#mobile-nav-wrapper {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			background-color: rgba(0,0,0,0.4);
+		}
+
 		.mobile-menu-icon {
 			display: none;
 		}
@@ -182,23 +194,6 @@
 		}
 
 		.mobile-link:focus, .mobile-link:active {
-			text-decoration: none;
-			color: rgba(12,111,196,1);
-		}
-
-		.close-link {
-			display: block;
-			padding: 10px 20px 10px 10px;
-			margin: 0 auto;
-			cursor: pointer;
-		}
-
-		.close-link:hover {
-			text-decoration: none;
-			color: rgba(12,111,196,1);
-		}
-
-		.close-link:focus, .close-link:active {
 			text-decoration: none;
 			color: rgba(12,111,196,1);
 		}
@@ -668,6 +663,7 @@
 <body>
 
 	<!--Mobile Nav-->
+		<div id="mobile-nav-wrapper">
 			<div class="mobile-nav">
 				<ul class="mobile-ul">
 					<li><a class="mobile-link musicmlink" href="#music">music</a></li>
@@ -676,9 +672,9 @@
 					<li><a class="mobile-link aboutmlink" href="#about">about</a></li>
 					<li><a class="mobile-link contactmlink" href="#contact">contact</a></li>
 					<li><a class="mobile-link blogmlink" target="_blank" href="https://jamesddavies.tumblr.com/">blog</a></li>
-					<li class="close-link">close menu</li>
 				</ul>
 			</div>
+		</div>
 
 	<div class="bg-top">
 
@@ -1288,13 +1284,15 @@
 	//Slide mobile menu when icon is clicked//
 	$(document).ready(function(){
 		$(".mobile-menu-icon, .mobile-menu-icon-pg").click(function(){
+			$("#mobile-nav-wrapper").fadeIn('fast');
 			$(".mobile-ul").css({"transform": "translate(0%)", "transition": "400ms", "transition-timing-function": "ease-out"});
 		});
 	});
 
 	//Hide mobile menu when menu item is clicked//
 	$(document).ready(function(){
-		$(".mobile-link, .close-link").click(function(){
+		$("#mobile-nav-wrapper").click(function(){
+			$("#mobile-nav-wrapper").fadeOut('fast');
 			$(".mobile-ul").css({"transform": "translate(100%)", "transition": "150ms", "transition-timing-function": "linear"});
 		});
 	});
