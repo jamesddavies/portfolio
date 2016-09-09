@@ -573,6 +573,12 @@
 				padding: 15px;
 			}
 
+			/*TAKE MARGIN OFF PAGE BGS ON MOBILE*/
+
+			.music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg {
+				margin: 0;
+			}
+
 		}
 
 		@media (max-width: 700px) {
@@ -1136,16 +1142,6 @@
 			$(".contact-bg").show('slide',{direction:'up'},200);
 		});
 	});
-
-
-	//Take margin off content sections for MOBILE//
-
-	$(document).ready(function(){
-		if ($(window).width() <= 1000) {
-			$(".music-bg, .design-bg, .writing-bg, .about-bg, .contact-bg").css("margin", "0");
-		};
-	});
-
 	
 	</script>
 
