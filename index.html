@@ -437,6 +437,52 @@
 
 		.portfolio-img {
 			margin-bottom: 10px;
+			cursor: pointer;
+		}
+
+		#modal1 {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			overflow-y: auto;
+			background-color: rgba(0,0,0,0.4);
+		}
+
+		.modal-content {
+			background-color: rgba(255,255,255,1);
+			margin: 2% auto;
+			padding: 20px;
+			width: 80%;
+			border-radius: 0px;
+			display: none;
+			text-align: center;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1.1em;
+		}
+
+		.modal-content p {
+			padding: 20px;
+		}
+
+		.modal-content img {
+			margin: 0 auto;
+		}
+
+		.close {
+			float: right;
+			font-size: 1.6em;
+			font-weight: bold;
+			color: rgba(60,60,60,1);
+		}
+
+		.close:hover, .close:focus {
+			text-decoration: none;
+			color: rgba(0,0,0,1);
+			cursor: pointer;
 		}
 
 		/*WRITING SECTION*/
@@ -684,17 +730,81 @@
 
 					<div class="col-md-4">
 						<p class="skills-h">Work</p>
-						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105418/jamesdavies-website_bcqkoo.png">
-						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
-						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
-						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+
+						<img class="img-responsive portfolio-img" id="desimg1" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105418/jamesdavies-website_bcqkoo.png">
+						<img class="img-responsive portfolio-img" id="desimg2" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+						<img class="img-responsive portfolio-img" id="desimg3" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+						<img class="img-responsive portfolio-img" id="desimg4" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
 					</div>
 
 					<div class="col-md-4">
-						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105426/photo-site_akd4xh.png">
-						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
-						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
-						<img class="img-responsive portfolio-img" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+						<img class="img-responsive portfolio-img" id="desimg5" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105426/photo-site_akd4xh.png">
+						<img class="img-responsive portfolio-img" id="desimg6" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+						<img class="img-responsive portfolio-img" id="desimg7" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+						<img class="img-responsive portfolio-img"  id="desimg8" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+
+						<!--DESIGN PAGE MODAL AND CONTENT-->
+
+							<div id="modal1" class="modal">
+
+								<!--Portfolio site modal-->
+								<div class="modal-content" id="modalcontent1">
+									<span class="close">x</span>
+									<img class="img-responsive" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105418/jamesdavies-website_bcqkoo.png">
+									<p><b>My personal portfolio site. You're on it!</b><br>-<br>Design, HTML, CSS, Javascript<br>-<br>A single page application created to display my work and practise building websites in the process. I've included features to this site as they take my fancy and it's become a sort of playground for me to try out new techniques and ideas. Take a look around, and if you fancy it, head over to my Contact page to give me some feedback!</p>
+								</div>
+
+								<!--Coming soon modal-->
+								<div class="modal-content" id="modalcontent2">
+									<span class="close">x</span>
+									<img class="img-responsive" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+									<p><b>Coming soon.</b><br>-<br>Check back soon for more content!</p>
+								</div>
+
+								<!--Coming soon modal-->
+								<div class="modal-content" id="modalcontent3">
+									<span class="close">x</span>
+									<img class="img-responsive" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+									<p><b>Coming soon.</b><br>-<br>Check back soon for more content!</p>
+								</div>
+
+								<!--Coming soon modal-->
+								<div class="modal-content" id="modalcontent4">
+									<span class="close">x</span>
+									<img class="img-responsive" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+									<p><b>Coming soon.</b><br>-<br>Check back soon for more content!</p>
+								</div>
+
+								<!--Photo site modal-->
+								<div class="modal-content" id="modalcontent5">
+									<span class="close">x</span>
+									<a href="https://jamesddavies.github.io/Mockup-Photography-Website/" target="_blank"><img class="img-responsive" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105426/photo-site_akd4xh.png"></a>
+									<p><b>Mockup Photography Site</b><br>-<br>Design, HTML, CSS, Javascript<br>-<br>ALL IMAGES ON THIS SITE BELONG TO ALEX STROHL.<br>This is a mockup site created to practise building a site for a photographer. Built around the work of one of my favourites photographers, Alex Strohl, this would be suitable for any photographer. The site's first purpose is to show off the photographer's work, which is achieved with randomised full-page background images.</p>
+								</div>
+
+								<!--Coming soon modal-->
+								<div class="modal-content" id="modalcontent6">
+									<span class="close">x</span>
+									<img class="img-responsive" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+									<p><b>Coming soon.</b><br>-<br>Check back soon for more content!</p>
+								</div>
+
+								<!--Coming soon modal-->
+								<div class="modal-content" id="modalcontent7">
+									<span class="close">x</span>
+									<img class="img-responsive" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+									<p><b>Coming soon.</b><br>-<br>Check back soon for more content!</p>
+								</div>
+
+								<!--Coming soon modal-->
+								<div class="modal-content" id="modalcontent8">
+									<span class="close">x</span>
+									<img class="img-responsive" src="http://res.cloudinary.com/jamesddavies/image/upload/v1473105431/coming-soon_nm7abg.png">
+									<p><b>Coming soon.</b><br>-<br>Check back soon for more content!</p>
+								</div>
+							</div>
+
+
 					</div>
 				</div>
 			</div>
@@ -730,6 +840,9 @@
 			</div>
 
 		</div>
+
+
+	
 
 	
 
@@ -897,6 +1010,71 @@
 		});
 	});
 
+	//DESIGN PAGE//
+
+	//When picture is clicked, open modal//
+
+	$(document).ready(function(){
+		$(".portfolio-img").click(function(){
+			$(".modal").fadeIn('fast');
+		});
+	});
+
+	//When 'X' is clicked, close modal//
+
+	$(document).ready(function(){
+		$(".close").click(function(){
+			$(".modal").fadeOut('fast');
+			$(".modal-content").fadeOut('fast');
+		});
+	});
+
+	
+	//Click anywhere outside of modal content to close it//
+
+	$(document).ready(function(){
+		$(".modal").click(function(){
+			$(".modal").fadeOut('fast');
+			$(".modal-content").fadeOut('fast');
+		});
+	});
+
+	//Show corresponding modal content for each picture//
+
+	$(document).ready(function(){
+
+		$("#desimg1").click(function(){
+			$("#modalcontent1").fadeIn('fast');
+		});
+
+		$("#desimg2").click(function(){
+			$("#modalcontent2").fadeIn('fast');
+		});
+
+		$("#desimg3").click(function(){
+			$("#modalcontent3").fadeIn('fast');
+		});
+
+		$("#desimg4").click(function(){
+			$("#modalcontent4").fadeIn('fast');
+		});
+
+		$("#desimg5").click(function(){
+			$("#modalcontent5").fadeIn('fast');
+		});
+
+		$("#desimg6").click(function(){
+			$("#modalcontent6").fadeIn('fast');
+		});
+
+		$("#desimg7").click(function(){
+			$("#modalcontent7").fadeIn('fast');
+		});
+
+		$("#desimg8").click(function(){
+			$("#modalcontent8").fadeIn('fast');
+		});
+	});
 
 	//MOBILE//
 
