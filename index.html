@@ -223,7 +223,7 @@
 
 		.writing-bg {
 			width: 100%;
-			height: 100vh;
+			height: auto;
 			background-color: rgba(255,255,255,1);
 			display: none;
 			position: absolute;
@@ -232,7 +232,7 @@
 
 		.about-bg {
 			width: 100%;
-			height: 100vh;
+			height: auto;
 			display: none;
 			position: absolute;
 			margin-top: 60px;
@@ -560,6 +560,27 @@
 			display: inline;
 		}
 
+		.about-textbox {
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		}
+
+		.about-textbox img {
+			border-radius: 50%;
+			margin: 0 auto;
+			padding-top: 40px;
+		}
+
+		.about-text {
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+			font-size: 1.6em;
+			color: rgba(255,255,255,1);
+			padding: 75px;
+		}		
+
+
 		/*CONTACT SECTION*/
 
 		.contact-h {
@@ -570,7 +591,41 @@
 			display: inline;
 		}
 
+		.contact-deets {
+			text-align: center;
+		}
 
+		.contact-deets p:first-child {
+			margin-top: 85px;
+		}
+
+		.contact-deets p {
+			font-family: 'Raleway', sans-serif;
+			font-size: 1.6em;
+			margin-top: 20px;
+		}
+
+		.contact-deets ul {
+			text-align: center;
+			margin-top: 150px;
+		}
+
+		.contact-deets ul li {
+			display: inline;
+			padding: 20px;
+		}
+
+		.contact-deets ul li a {
+			color: rgba(0,0,0,1);
+			transition: 500ms;
+			-webkit-transition: 500ms;
+			-moz-transition: 500ms;
+			-o-transition: 500ms;
+		}
+
+		.contact-deets ul li a:hover {
+			color: rgba(0,0,0,0.5);
+		}
 		
 		/*Responsive design*/
 
@@ -636,6 +691,29 @@
 
 			.article-h, .article-sub-h {
 				max-width: 90%;
+			}
+
+			/*ABOUT PAGE*/
+
+			.about-textbox {
+				text-align: justify;
+			}
+
+			.about-text {
+				padding: 70px 20px 40px 20px;
+			}
+
+			/*CONTACT PAGE*/
+
+			.contact-deets ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			.contact-deets ul li {
+				display: block;
+				padding: 20px 0 20px 0;
+				margin: 0;
 			}
 
 			/*TAKE MARGIN OFF PAGE BGS ON MOBILE*/
@@ -752,7 +830,7 @@
 
 					</div>
 					<div class="col-md-4 music-col music-textbox">
-						<p class="music-text">I'm a guitarist, singer and songwriter. I first picked up a guitar at the age of 11, and I've been in love with it ever since. I try and play as many styles as I can, dabbling in jazz, funk, country, folk... but my main love and passion is (and probably always will be) rock and pop music. I started singing out of necessity (my band needed a singer) when I was around 16, and similarly, I started writing songs because we needed stuff to play! That band was called <a target="_blank" href="https://www.google.co.uk/#q=stars+and+flights">Stars & Flights</a>, and we played together for about 5 years before calling it a day. I'm currently writing and demoing material for a new band. I play as a session guitarist, working in pit orchestras and tribute bands. I also play bass guitar and (attempt to) play the piano. I'm a qualified secondary school music teacher as well as a private guitar teacher. Head over to my contact page if you want to hire me or discuss guitar lessons!</p>
+						<p class="music-text">I'm a guitarist, singer and songwriter. I first picked up a guitar at the age of 11, and I've been in love with it ever since. I try and play as many styles as I can, dabbling in jazz, funk, country, folk... but my main love and passion is (and probably always will be) rock and pop music. I started singing out of necessity (my band needed a singer) when I was around 16, and similarly, I started writing songs because we needed stuff to play! That band was called <a target="_blank" href="https://www.google.co.uk/#q=stars+and+flights">Stars & Flights</a>, and we played together for about 5 years before calling it a day. I'm currently writing and demoing material for a new band. I play as a session guitarist, working in pit orchestras and tribute bands. I also play bass guitar and (attempt to) play the piano. I'm also a private guitar teacher. Head over to my contact page if you want to hire me or discuss guitar lessons!</p>
 					</div>
 				</div>
 			</div>
@@ -1037,6 +1115,8 @@
 
 		</div>
 
+		<!--About section-->
+
 		<div class="about-bg" id="about">
 
 			<p class="about-h">about</p>
@@ -1045,7 +1125,16 @@
 				<i class="fa fa-bars fa-3x burger" aria-hidden="true"></i>
 			</div>
 
+			<div class="about-textbox">
+
+				<img class="img-responsive" src="http://res.cloudinary.com/jamesddavies/image/upload/v1468263208/me_qkwdjm.jpg">
+
+				<p class="about-text">I'm James, I'm 23, and I'm from Neath in South Wales. When I'm not playing music, building websites or writing, you can usually find me watching terrible TV, hanging out with friends or hiking up big hills. I'm a graduate of Bristol Institute of Modern Music and a qualified secondary school music teacher. My current aim is to become better at developing high quality, fully responsive websites that meet each client's individual needs. I've only just started, but I'm getting there!</p>
+			</div>
+
 		</div>
+
+		<!--CONTACT SECTION-->
 
 		<div class="contact-bg" id="contact">
 
@@ -1053,6 +1142,22 @@
 
 			<div class="mobile-menu-icon-pg">
 				<i class="fa fa-bars fa-3x burger" aria-hidden="true"></i>
+			</div>
+
+			<div class="contact-deets">
+				
+				<p>jamesdaviddavies@gmail.com</p>
+				<p>07970 780539</p>
+					
+				<ul>
+					<li><a href="https://github.com/jamesddavies" target="_blank"><i class="fa fa-github fa-5x" aria-hidden="true"></i></li></a>
+					<li><a href="https://www.facebook.com/james.davies.7902" target="_blank"><i class="fa fa-facebook fa-5x" aria-hidden="true"></i></li></a>
+					<li><a href="https://twitter.com/jamesddavies" target="_blank"><i class="fa fa-twitter fa-5x" aria-hidden="true"></i></li></a>
+					<li><a href="https://www.instagram.com/jamesddavies/" target="_blank"><i class="fa fa-instagram fa-5x" aria-hidden="true"></i></li></a>
+					<li><a href="https://uk.linkedin.com/in/james-davies-04891b68
+" target="_blank"><i class="fa fa-linkedin fa-5x" aria-hidden="true"></i></li></a>
+				</ul>	
+				
 			</div>
 
 		</div>
@@ -1081,7 +1186,7 @@
   				"background": "-moz-linear-gradient(bottom right, rgba(98,178,246,1), rgba(3,89,162,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(98,178,246,1), rgba(3,89,162,1))" // Standard syntax //
 				});
-			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover, .mobile-music-text a").css("color", "rgba(12,111,196,1)"); //blue nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover, .mobile-music-text a, .contact-deets p").css("color", "rgba(12,111,196,1)"); //blue nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(8,110,190,1)");
 			$(".mobile-ul, .close-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active, .close-link:hover, .close-link:focus, .close-link:active").css("color", "rgba(12,111,196,1)"); //blue nav items mobile//
 			$(".music-h, .writing-h, .contact-h").css("color", "rgba(25,123,207,1)"); //blue page headings//
@@ -1093,7 +1198,7 @@
   				"background": "-moz-linear-gradient(bottom right, rgba(235,30,30,1), rgba(154,20,20,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(235,30,30,1), rgba(154,20,20,1))" // Standard syntax //
 				})
-			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover, .mobile-music-text a").css("color", "rgba(216,27,27,1)"); //red nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover, .mobile-music-text a, .contact-deets p").css("color", "rgba(216,27,27,1)"); //red nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(185,24,24,1)");
 			$(".mobile-link, .close-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active, .close-link:hover, .close-link:focus, .close-link:active").css("color", "rgba(216,27,27,1)"); //red nav items mobile//
 			$(".music-h, .writing-h, .contact-h").css("color", "rgba(181,11,11,1)"); //red page headings//
@@ -1105,7 +1210,7 @@
   				"background": "-moz-linear-gradient(bottom right, rgba(64,211,53,1), rgba(16,89,11,1))", // For Firefox 3.6 to 15 //
   				"background": "linear-gradient(to bottom right, rgba(64,211,53,1), rgba(16,89,11,1))" // Standard syntax //
 				})
-			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover, .mobile-music-text a").css("color", "rgba(48,156,40,1)"); //green nav items desktop//
+			$(".jd-link, .nav-link, .nav-link:hover, .tuition-btn:hover, .mobile-music-text a, .contact-deets p").css("color", "rgba(48,156,40,1)"); //green nav items desktop//
 			$(".nav-link:after").css("border-color", "rgba(42,136,35,1)");
 			$(".mobile-link, .close-link, .mobile-link:hover, .mobile-link:focus, .mobile-link:active, .close-link:hover, .close-link:focus, .close-link:active").css("color", "rgba(48,156,40,1)"); //green nav items mobile//
 			$(".music-h, .writing-h, .contact-h").css("color", "rgba(36,133,29,1)"); //green page headings//
