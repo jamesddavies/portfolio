@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Basic Page Needs-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>James Davies - Musician, Web Developer and Writer</title>
+	<!--IE Support-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<!--ICO image-->
+	<link rel="icon" type="image/png" href="http://res.cloudinary.com/jamesddavies/image/upload/v1471098832/jd-ico_jy45xh.png"/>
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway" rel="stylesheet">
+	<!--jQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!--Font Awesome-->
+	<script src="https://use.fontawesome.com/5da19112ad.js"></script>
+	<!--CSS-->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+
+	body {
+		background: none;
+		background-color: rgba(240,240,240,1);
+	}
+	
+	#desktop-ul li:first-child {
+		border-bottom: 2px solid rgba(89,184,217,1);
+	}
+
+	/*PAGE CONTENT*/
+
+	#me {
+		width: 100%;
+		text-align: center;
+		position: fixed;
+		top: 250px;
+		transition: all 600ms ease-out;
+		opacity: 1;
+	}
+
+	#me img {
+		max-width: 200px;
+		border-radius: 50%;
+		border: 8px solid white;
+	}
+
+	#page-content {
+		position: relative;
+		top: 700px;
+	}
+
+	#pillar {
+		width: 250px;
+		height: 2400px;
+		background: linear-gradient(45deg, #022196, #20ecd1 120%);
+		position: absolute;
+		top: 0;
+		text-align: center;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		color: white;
+		font-family: 'Open Sans Condensed', sans-serif;
+	}
+
+	h2:first-child {
+		position: relative;
+		top: 300px;
+	}
+
+	h2:nth-child(2){
+		position: relative;
+		top: 1100px;
+	}
+
+	h2:last-child{
+		position: relative;
+		top: 1900px;
+	}
+
+	/*WEB DEV*/
+
+	#heading1-wrapper, #heading2-wrapper, #heading3-wrapper {
+		display: none;
+	}
+
+	.content-text {
+		position: absolute;
+		font-size: 1.4em;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: rgb(100,100,100);
+		width: 400px;
+		text-align: center;
+		transition: all 600ms ease-out;
+		opacity: 1;
+	}
+
+	#webdevinfo {
+		top: 220px;
+		left: 80px;
+	}
+
+	#musicinfo {
+		top: 1060px;
+		left: 80px;
+	}
+
+	#writerinfo {
+		top: 1965px;
+		left: 80px;
+	}
+
+	#webdevinfo a, #musicinfo a, #writerinfo a {
+		text-decoration: bold underline;
+		color: inherit;
+		transition: all 300ms ease-out;
+	}
+
+	#webdevinfo a:hover, #musicinfo a:hover, #writerinfo a:hover {
+		color: rgb(180,180,180);
+	}
+
+	#webdevskills {
+		position: absolute;
+		top: 110px;
+		right: 210px;
+		font-size: 1.4em;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: rgb(100,100,100);
+		transition: all 600ms ease-out;
+		opacity: 1;
+	}
+
+	#musiclinks {
+		position: absolute;
+		top: 1020px;
+		right: 210px;
+		font-size: 1.4em;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: rgb(100,100,100);
+		transition: all 600ms ease-out;
+		opacity: 1;
+		text-align: center;
+	}
+
+	#writerlink {
+		position: absolute;
+		top: 1995px;
+		right: 180px;
+		opacity: 1;
+		text-align: center;
+		transition: all 600ms ease-out;
+	}
+
+	button {
+		background-color: transparent;
+		border-radius: 0px;
+		border: 2px solid rgb(100,100,100);
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 1.2em;
+		color: rgb(100,100,100);
+		padding: 10px 30px 10px 30px;
+		margin: 10px;
+		cursor: pointer;
+		transition: all 600ms ease-out;
+	}
+
+	button:hover {
+		background-color: #59B8D9;
+		color: #FFFFFF;
+		border-color: #59B8D9;
+	}
+
+	#youtube, #spotify {
+		color: #59B8D9;
+		transition: all 500ms ease-out;
+		cursor: pointer;
+	}
+
+	#youtube:hover {
+		color: #bb0000;
+	}
+
+	#spotify:hover {
+		color: #00e461;
+	}
+
+	#webdevinfo.scroll-out, #webdevskills.scroll-out, #musicinfo.scroll-out, #musiclinks.scroll-out, #writerinfo.scroll-out, #writerlink.scroll-out, #me.scroll-out {
+		opacity: 0;
+	}
+
+	.small {
+		font-size: 0.7em;
+	}
+
+	ul.right {
+		position: absolute;
+		left: 120px;
+		top: 70px;
+	}
+
+	ul.left {
+		position: absolute;
+		left: -140px;
+		top: 30px;
+	}
+
+	ul li {
+		list-style-type: none;
+		margin: 30px 0;
+	}
+
+	.skill-circle {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background: linear-gradient(45deg, #022196, #20ecd1 120%);
+		position: relative;
+	}
+
+	.skill-circle img {
+		position: absolute;
+		top: 10px;
+		left: 22px;
+		max-height: 80%;
+		max-width: 80%;
+	}
+
+	ul.right img {
+		width: 70%;
+		left: 16px;
+		top: 14px;
+	}
+
+	#info-circle .fa {
+		color: rgba(80,80,80,0.9);
+		position: fixed;
+		bottom: 10px;
+		left: 10px;
+		cursor: pointer;
+		display: none;
+	}
+
+	#site-info {
+		width: auto;
+		height: auto;
+		position: fixed;
+		bottom: 16px;
+		left: 50px;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 1em;
+		transform: translateY(300%);
+		transition: all 300ms ease-out;
+	}
+
+	#site-info.up {
+		transform: translateY(0);
+	}
+
+	#site-info p {
+		display: inline;
+		color: rgb(80,80,80);
+	}
+
+	#site-info a {
+		text-decoration: underline;
+		color: rgb(80,80,80);
+	}
+
+	/*RESPONSIVE*/
+
+	@media (max-width: 1200px){
+		#pillar {
+			display: none;
+		}
+
+		#me {
+			position: relative;
+			top: 120px;
+		}
+
+		#page-content {
+			position: relative;
+			top: 180px;
+		}
+
+		#heading1-wrapper, #heading2-wrapper, #heading3-wrapper {
+			display: block;
+			text-align: center;
+			width: 100%;
+			height: auto;
+			background: linear-gradient(45deg, #022196, #20ecd1 120%);
+			position: relative;
+		}
+
+		#heading2-wrapper {
+			top: 30px;
+			margin-bottom: 50px;
+		}
+
+		#heading3-wrapper {
+			top: 40px;
+			margin-bottom: 70px;
+		}
+
+		#heading1-wrapper h3, #heading2-wrapper h3, #heading3-wrapper h3 {
+			color: #FFF;
+			font-family: 'Open Sans Condensed', sans-serif;
+			font-size: 1.3em;
+			padding: 5px;
+		}
+
+		#webdevinfo, #webdevskills, #musicinfo, #musiclinks, #writerinfo, #writerlink {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		#webdevskills, #musiclinks {	
+			text-align: center;
+			top: 30px;
+		}
+
+		#webdevskills ul {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			padding: 0;
+			width: 40%;
+			display: inline-block;
+			text-align: center;
+		}
+
+		#webdevskills ul li {
+			margin: 10px;
+			display: inline-block;
+		}
+
+		#youtube {
+			color: #bb0000;
+		}
+
+		#spotify {
+			color: #00e461;
+		}
+
+		button {
+			margin-bottom: 80px;
+			background-color: #59B8D9;
+			color: #FFFFFF;
+			border-color: #59B8D9;
+		}
+	}
+
+</style>
+
+<body>
+
+	<div id="page-wrapper">
+
+		<!--DESKTOP NAV-->
+
+		<nav id="desktop-nav">
+
+			<div id="title-wrapper">
+			<a href="index.html"><h1 id="jd">
+				<span class="j">j</span>
+				<span class="a">a</span>
+				<span class="m">m</span>
+				<span class="e">e</span>
+				<span class="s">s</span>
+				<span class="d">d</span>
+				<span class="a2">a</span>
+				<span class="v">v</span>
+				<span class="i">i</span>
+				<span class="e2">e</span>
+				<span class="s2">s</span>
+			</h1></a>
+			</div>
+
+			<ul id="desktop-ul">
+				<li><a href="about.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="http://jamesddavies.tumblr.com" target="_blank">Blog</a></li>
+				<li><a class="contactclick">Contact</a></li>
+			</ul>
+
+			<div id="burger-wrapper">
+				<button class="burger">
+					<span></span>
+				</button>
+			</div>
+
+			<div id="quick-social">
+				<ul id="soc-list">
+					<li class="soc-circle" id="hide-social"><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></a></li>
+					<li class="soc-circle"><a href="mailto:jamesdaviddavies@gmail.com"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a></li>
+					<li class="soc-circle"><a href="https://www.facebook.com/james.davies.7902"><i class="fa fa-facebook fa-2x soc-icon" aria-hidden="true"></i></a></li>
+					<li class="soc-circle"><a href="https://twitter.com/jamesddavies"><i class="fa fa-twitter fa-2x soc-icon" aria-hidden="true"></i></a></li>
+					<li class="soc-circle"><a href="https://github.com/jamesddavies"><i class="fa fa-github fa-2x soc-icon" aria-hidden="true"></i></a></li>
+					<li class="soc-circle"><a href="https://www.instagram.com/jamesddavies/"><i class="fa fa-instagram fa-2x soc-icon" aria-hidden="true"></i></a></li>
+					<li class="soc-circle"><a href="https://uk.linkedin.com/in/james-davies-04891b68"><i class="fa fa-linkedin fa-2x soc-icon" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+
+		</nav>
+
+		<!--MOBILE NAV-->
+		<ul id="mobile-ul">
+				<li id="m1"><a href="about.html">About</a></li>
+				<li id="m2"><a href="portfolio.html">Portfolio</a></li>
+				<li id="m3"><a href="http://jamesddavies.tumblr.com" target="_blank">Blog</a></li>
+				<li id="m4"><a class="contactclick">Contact</a></li>
+		</ul>
+
+		<!--PAGE CONTENT-->
+		<div id="me">
+			<img src="images/mecrop.jpg">
+		</div>
+
+		<div id="page-content">
+		<div id="heading1-wrapper"><h3>Web Developer</h3></div>	
+			
+		<div id="pillar">
+
+			<h2 id="webdev">Web Developer</h2>
+			<h2 id="musician">Musician</h2>
+			<h2 id="writer">Writer</h2>
+
+		</div>
+
+		<!--WEB DEV SECTION-->
+
+		<div class="content-text" id="webdevinfo"><p>- Beginner web developer focusing on HTML, CSS and Javascript<br>- Aiming to build simple, functional, responsive websites and web apps<br>- Working towards clean, effective UX/UI design<br><br>See some things I've made <a href="#">here</a>.</p></div>
+	
+		<div id="webdevskills">
+					<p>Skills <span class="small">(I'm working on...)</span></p>
+					<ul class="left">
+						<li><div class="skill-circle"><img src="images/skillsimgs/html5-logo.png"></div></li>
+						<li><div class="skill-circle"><img src="images/skillsimgs/css3-logo.png"></div></li>
+						<li><div class="skill-circle"><img src="images/skillsimgs/javscript-logo.png"></div></li>
+					</ul>
+					<ul class="right">
+						<li><div class="skill-circle"><img src="images/skillsimgs/jquery-logo.gif"></div></li>
+						<li><div class="skill-circle"><img src="images/skillsimgs/bootstrap-logo.png"></div></li>
+						<li><div class="skill-circle"><img src="images/skillsimgs/photoshop-logo.png"></div></li>
+					</ul>
+		</div>
+
+		<!--MUSICIAN SECTION-->
+
+		<div id="heading2-wrapper"><h3>Musician</h3></div>
+
+		<div id="musicinfo" class="content-text"><p>- 12 years playing experience<br>- First Instruments: Electric & Acoustic Guitar<br>- Second Instruments: Vocals, Bass Guitar<br>- Played in <a target="_blank" href="https://www.google.co.uk/#q=stars+and+flights">Stars & Flights</a> for 5 years<br>- Session guitarist in <a target="_blank" href="https://www.facebook.com/brunomarzuk">The Bruno Mars Experience</a> and pit orchestras around South Wales<br>- Private guitar teacher: <a target="_blank" href="https://www.facebook.com/JamesDaviesGuitarTuition">Get in touch</a></div>
+
+		<div id="musiclinks">
+			<p>Watch</p><a target="_blank" href="https://www.youtube.com/watch?v=B6q0mVp4X3g&list=PL-iqM780O_LJ8cSAaw19zJpUEyD5v3UZd"><i id="youtube" class="fa fa-youtube-play fa-4x" aria-hidden="true"></i></a>
+			<p>Listen</p><a target="_blank" href="https://open.spotify.com/artist/5XLQtc51DACu6R2jrEzhn5"><i id="spotify" class="fa fa-spotify fa-4x" aria-hidden="true"></i></a>
+		</div>
+
+		<!--WRITING SECTION-->
+
+		<div id="heading3-wrapper"><h3>Writer</h3></div>
+
+		<div id="writerinfo" class="content-text"><p>- Amateur music journalist<br>- Live & Album Reviews<br>- Pop, Indie, Rock, Metal<br>- <a target="_blank" href="http://www.subba-cultcha.com/">Subba-Cultcha.com</a></p></div>
+
+		<div id="writerlink">
+			<a href="writing.html"><button>Read some things<br>I've written</button></a>
+		</div>
+
+		</div>
+
+		<!--INFO BUTTON-->
+		<div id="info-circle">
+			<i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+		</div>
+
+		<div id="site-info">
+			<p>&copy;2016 James Davies</p> &nbsp;&nbsp;&nbsp;<a href="#"><p id="sitemap-link">Sitemap</p></a>
+		</div>
+
+	</div>	
+	
+<script src="js/nav-script.js"></script>
+<script>
+$(document).ready(function(){
+
+	/*PILLAR POSITION*/
+	var pillarPlace = ($(window).width()/2) - ($("#pillar").width()/2);
+
+	$("#pillar").css("left","" + pillarPlace + "px");
+
+})
+
+//SCROLL FUNCTIONS//
+
+$(window).scroll(function(){
+//SHOW INFO BUTTON ON SCROLL//
+	$("#info-circle .fa").fadeIn("slow");
+
+//IF ELEMENT IS IN VIEW, SHOW OTHERS//
+	function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+	if (isScrolledIntoView($("#webdev")) === false){
+		$("#webdevskills, #webdevinfo").addClass("scroll-out");
+	} else {
+		$("#webdevskills, #webdevinfo").removeClass("scroll-out");
+	}
+
+	if (isScrolledIntoView($("#musician")) === false){
+		$("#musicinfo, #musiclinks").addClass("scroll-out");
+	} else {
+		$("#musicinfo, #musiclinks").removeClass("scroll-out");
+	}
+
+	if (isScrolledIntoView($("#writer")) === false){
+		$("#writerinfo, #writerlink").addClass("scroll-out");
+	} else {
+		$("#writerinfo, #writerlink").removeClass("scroll-out");
+	}
+})
+//CLICK INFO BUTTON TO SHOW COPYRIGHT AND SITEMAP LINK//
+	$("#info-circle").click(function(){
+		$("#site-info").toggleClass("up");
+	});
+
+//OFFSET ANCHOR LINK//
+	function offsetAnchor() {
+    	if(location.hash.length !== 0) {
+        	window.scrollTo(window.scrollX, window.scrollY - 300);
+    	}
+	}
+
+	window.addEventListener("hashchange", offsetAnchor);
+
+	window.setTimeout(offsetAnchor, 1);
+
+
+</script>
+</body>
+</html>
