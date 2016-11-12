@@ -89,6 +89,11 @@
 		font-size: 0.8em;
 	}
 
+	#bloc {
+		background: linear-gradient(45deg, #329C8C, #6EF0DD);
+		color: #FFF;
+	}
+
 	#tictactoe {
 		background: linear-gradient(45deg, #4D83DB, #DB5B4D);
 		color: #FFF;
@@ -162,7 +167,7 @@
 		<nav id="desktop-nav">
 
 			<div id="title-wrapper">
-			<a href="index"><h1 id="jd">
+			<a href="index.html"><h1 id="jd">
 				<span class="j">j</span>
 				<span class="a">a</span>
 				<span class="m">m</span>
@@ -178,8 +183,8 @@
 			</div>
 
 			<ul id="desktop-ul">
-				<li><a href="about">About</a></li>
-				<li><a href="portfolio">Portfolio</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
 				<li><a href="http://jamesddavies.tumblr.com" target="_blank">Blog</a></li>
 				<li><a class="contactclick">Contact</a></li>
 			</ul>
@@ -192,7 +197,7 @@
 
 			<div id="quick-social">
 				<ul id="soc-list">
-					<li class="soc-circle" id="hide-social"><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></a></li>
+				<li class="soc-circle" id="hide-social"><i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></a></li>
 					<li class="soc-circle"><a target="_blank" href="mailto:jamesdaviddavies@gmail.com"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a></li>
 					<li class="soc-circle"><a target="_blank" href="https://www.facebook.com/james.davies.7902"><i class="fa fa-facebook fa-2x soc-icon" aria-hidden="true"></i></a></li>
 					<li class="soc-circle"><a target="_blank" href="https://twitter.com/jamesddavies"><i class="fa fa-twitter fa-2x soc-icon" aria-hidden="true"></i></a></li>
@@ -206,14 +211,19 @@
 
 		<!--MOBILE NAV-->
 		<ul id="mobile-ul">
-				<li id="m1"><a href="about">About</a></li>
-				<li id="m2"><a href="portfolio">Portfolio</a></li>
+				<li id="m1"><a href="about.html">About</a></li>
+				<li id="m2"><a href="portfolio.html">Portfolio</a></li>
 				<li id="m3"><a href="http://jamesddavies.tumblr.com" target="_blank">Blog</a></li>
 				<li id="m4"><a class="contactclick">Contact</a></li>
 		</ul>
 
 		<!--PAGE CONTENT-->
 		<div id="content">
+
+		<div class="project" id="bloc">
+			<p class="less"><a target="_blank" href="https://jamesddavies.github.io/practise/bloc/"><i class="fa fa-square fa-3x" aria-hidden="true"></i><br><br>.bloc</a><br><button>Read More</button></p>
+			<p class="more">HTML, CSS, JavaScript/jQuery<br>A single player bloc-busting desktop game.<br><button class="less-button">Read Less</button></p>
+		</div>
 
 		<div class="project" id="tictactoe">
 			<p class="less"><a target="_blank" href="https://jamesddavies.github.io/practise/tictactoe/"><i class="fa fa-times-circle-o fa-3x" aria-hidden="true"></i><br><br>JavaScript Tic Tac Toe</a><br><button>Read More</button></p>
@@ -242,7 +252,7 @@
 		</div>
 
 		<div id="site-info">
-			<p>&copy;2016 James Davies</p> &nbsp;&nbsp;&nbsp;<a href="sitemap"><p id="sitemap-link">Sitemap</p></a>
+			<p>&copy;2016 James Davies</p> &nbsp;&nbsp;&nbsp;<a href="#"><p id="sitemap-link">Sitemap</p></a>
 		</div>
 
 	</div>	
