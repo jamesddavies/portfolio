@@ -14,7 +14,7 @@
 	<!--jQuery-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!--Font Awesome-->
-	<script async src="https://use.fontawesome.com/5da19112ad.js"></script>
+	<script src="https://use.fontawesome.com/5da19112ad.js"></script>
 	<!--CSS-->
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -87,6 +87,11 @@
 
 	.project .less-button {
 		font-size: 0.8em;
+	}
+
+	#random-quote {
+		background: linear-gradient(45deg, #63C8EB, #FCE3FC 120%);
+		color: #FFF;
 	}
 
 	#bloc {
@@ -167,7 +172,7 @@
 		<nav id="desktop-nav">
 
 			<div id="title-wrapper">
-			<a href="index"><h1 id="jd">
+			<a href="index.html"><h1 id="jd">
 				<span class="j">j</span>
 				<span class="a">a</span>
 				<span class="m">m</span>
@@ -183,8 +188,8 @@
 			</div>
 
 			<ul id="desktop-ul">
-				<li><a href="about">About</a></li>
-				<li><a href="portfolio">Portfolio</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
 				<li><a href="http://jamesddavies.tumblr.com" target="_blank">Blog</a></li>
 				<li><a class="contactclick">Contact</a></li>
 			</ul>
@@ -211,14 +216,20 @@
 
 		<!--MOBILE NAV-->
 		<ul id="mobile-ul">
-				<li id="m1"><a href="about">About</a></li>
-				<li id="m2"><a href="portfolio">Portfolio</a></li>
+				<li id="m1"><a href="about.html">About</a></li>
+				<li id="m2"><a href="portfolio.html">Portfolio</a></li>
 				<li id="m3"><a href="http://jamesddavies.tumblr.com" target="_blank">Blog</a></li>
 				<li id="m4"><a class="contactclick">Contact</a></li>
 		</ul>
 
 		<!--PAGE CONTENT-->
 		<div id="content">
+
+		<div class="project" id="random-quote">
+			<p class="less"><a target="_blank" href="https://jamesddavies.github.io/practise/random-quote/"><i class="fa fa-quote-left fa-3x" aria-hidden="true"></i> <i class="fa fa-quote-right fa-3x" aria-hidden="true"></i>
+<br><br>Random Quote Machine</a><br><button>Read More</button></p>
+			<p class="more">HTML, CSS, JavaScript/jQuery<br>A FreeCodeCamp project. Built to practise using APIs to fetch and display data.<br><button class="less-button">Read Less</button></p>
+		</div>
 
 		<div class="project" id="bloc">
 			<p class="less"><a target="_blank" href="https://jamesddavies.github.io/practise/bloc/"><i class="fa fa-square fa-3x" aria-hidden="true"></i><br><br>.bloc</a><br><button>Read More</button></p>
